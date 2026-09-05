@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>'UNHENGED!' — Motormouth</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@300;400;500;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav id="nav">
+    <a href="index.html" class="nav-logo">Motormouth<span>.</span></a>
+    <button class="nav-burger" id="burgerBtn" aria-label="Menu"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="works.html">Works</a></li>
+      <li><a href="exhibitions.html" class="active">Exhibitions</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+  <div class="exh-hero">
+    <div class="exh-hero-bg" style="background: radial-gradient(ellipse at 40% 60%, #1a3a5a 0%, transparent 65%);"></div>
+    <div class="exh-hero-inner">
+      <div style="margin-bottom:1.2rem"><a href="exhibitions.html" style="font-family:'Space Mono',monospace;font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(245,240,232,0.4);text-decoration:none;">← All Exhibitions</a></div>
+      <div class="exh-hero-meta"><span>Group Show</span><span>Goodspace Gallery, Sydney</span><span>31 January 2024</span></div>
+      <h1 class="exh-hero-title">'UNHENGED!'</h1>
+      <p class="exh-hero-tagline">A group exhibition at Goodspace Gallery featuring works by Lily Langley alongside fellow Sydney artists — unruly, unhinged, and unapologetically playful.</p>
+    </div>
+  </div>
+  <div class="exh-detail-body">
+    <div class="container">
+      <div class="exh-detail-grid">
+        <div class="exh-detail-sidebar reveal">
+          <div class="exh-detail-label">Venue</div><div class="exh-detail-value">Goodspace Gallery<br>Sydney, NSW</div>
+          <div class="exh-detail-label">Date</div><div class="exh-detail-value">31 January 2024</div>
+          <div class="exh-detail-label">Type</div><div class="exh-detail-value">Group Exhibition</div>
+        </div>
+        <div class="exh-detail-text reveal">
+          <p>Special Thanks to: Beau Russell AKA Lonely Skeleton for vision and invitation, and Goodspace Gallery for hosting.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- PHOTOS -->
+  <div class="photo-section">
+    <div class="container">
+      <span class="tag">From the Exhibition</span>
+      <div class="photo-grid">
+
+        <div class="photo-item reveal" data-title="'Maiden's Grave Henge', 2024. (Installation View)" data-year="2024" onclick="openPhoto(this)">
+          <img src="https://motormouthcomics.com/wp-content/uploads/2025/10/img_3770.jpg" alt="'Maiden's Grave Henge', 2024. (Installation View)" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+          <div class="photo-caption">
+            <div class="photo-caption-title">'Maiden's Grave Henge', 2024. (Installation View)</div>
+          </div>
+        </div>
+        <div class="photo-item reveal" data-title="'Maiden's Grave Henge', 2024 (Diptych Panel 1)" data-year="2024" onclick="openPhoto(this)">
+          <img src="https://motormouthcomics.com/wp-content/uploads/2025/10/img_3771.jpg" alt="'Maiden's Grave Henge', 2024 (Diptych Panel 1)" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+          <div class="photo-caption">
+            <div class="photo-caption-title">'Maiden's Grave Henge', 2024 (Diptych Panel 1)</div>
+          </div>
+        </div>
+        <div class="photo-item reveal" data-title="'Maiden's Grave Henge', 2024 (Diptych Panel 2)" data-year="2024" onclick="openPhoto(this)">
+          <img src="https://motormouthcomics.com/wp-content/uploads/2025/10/img_3772.jpg" alt="'Maiden's Grave Henge', 2024 (Diptych Panel 2)" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+          <div class="photo-caption">
+            <div class="photo-caption-title">'Maiden's Grave Henge', 2024 (Diptych Panel 2)</div>
+          </div>
+        </div>
+        <div class="photo-item reveal" data-title="'Maiden's Grave Henge', 2024 (Grave View with Poem)" data-year="2024" onclick="openPhoto(this)">
+          <img src="https://motormouthcomics.com/wp-content/uploads/2025/10/img_3773.jpg" alt="'Maiden's Grave Henge', 2024 (Grave View with Poem)" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+          <div class="photo-caption">
+            <div class="photo-caption-title">'Maiden's Grave Henge', 2024 (Grave View with Poem)</div>
+          </div>
+        </div>
+        <div class="photo-item reveal" data-title="Exhibition photo" data-year="2024" onclick="openPhoto(this)">
+          <img src="https://motormouthcomics.com/wp-content/uploads/2025/10/15aa4ba2-227d-4984-89ae-c786539f01eb.jpg" alt="Exhibition photo" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="photo-lightbox" onclick="if(event.target===this)closePhoto()">
+    <div class="photo-lightbox-inner">
+      <button class="photo-lightbox-close" onclick="closePhoto()">✕</button>
+      <div id="plbContent"></div>
+      <div class="photo-lightbox-caption"><strong id="plbTitle"></strong><span id="plbYear"></span></div>
+    </div>
+  </div>
+
+  <div class="exh-nav-strip">
+    <a href="exhibitions.html" class="exh-nav-link"><span class="exh-nav-dir">← All Exhibitions</span><span class="exh-nav-name">Back to CV</span></a>
+  </div>
+  <footer><a href="index.html" class="footer-logo">Motormouth<span>.</span></a><div class="footer-copy">© 2025 Motormouth / Lily Langley — All rights reserved</div></footer>
+  <script>
+    document.getElementById('burgerBtn').addEventListener('click', () => document.getElementById('navLinks').classList.toggle('open'));
+    const io = new IntersectionObserver(entries => entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } }), { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+    function openPhoto(el) {
+      const img = el.querySelector('img');
+      const svg = el.querySelector('svg');
+      document.getElementById('plbContent').innerHTML = img
+        ? `<img src="${img.src}" alt="${img.alt}" style="max-width:100%;max-height:80vh;object-fit:contain;display:block;margin:auto;">`
+        : svg.outerHTML;
+      document.getElementById('plbTitle').textContent = el.dataset.title;
+      document.getElementById('plbYear').textContent = el.dataset.year;
+      document.getElementById('photo-lightbox').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closePhoto() {
+      document.getElementById('photo-lightbox').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closePhoto(); });
+  </script>
+</body>
+</html>

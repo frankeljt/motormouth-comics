@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Login — Motormouth</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@300;400;500;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --ink:    #1a1008;
+      --paper:  #f5f0e8;
+      --cream:  #ede8dc;
+      --red:    #c8372d;
+      --yellow: #f0c233;
+      --border: 2px solid var(--ink);
+    }
+
+    body {
+      font-family: 'Space Grotesk', sans-serif;
+      background: var(--ink);
+      min-height: 100dvh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* subtle texture grid */
+    body::before {
+      content: '';
+      position: fixed; inset: 0;
+      background-image:
+        linear-gradient(rgba(245,240,232,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(245,240,232,0.03) 1px, transparent 1px);
+      background-size: 48px 48px;
+      pointer-events: none;
+    }
+
+    .login-card {
+      background: var(--paper);
+      border: var(--border);
+      box-shadow: 8px 8px 0 rgba(245,240,232,0.12);
+      width: 100%;
+      max-width: 400px;
+      padding: 2.5rem 2.5rem 2rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .login-logo {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2rem;
+      letter-spacing: 0.06em;
+      color: var(--ink);
+      text-decoration: none;
+      display: block;
+      margin-bottom: 0.3rem;
+    }
+    .login-logo span { color: var(--red); }
+
+    .login-eyebrow {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(26,16,8,0.4);
+      margin-bottom: 2rem;
+    }
+
+    .login-divider {
+      border: none;
+      border-top: var(--border);
+      margin-bottom: 2rem;
+    }
+
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      margin-bottom: 1rem;
+    }
+
+    .field label {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(26,16,8,0.5);
+    }
+
+    .field input {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1rem;
+      padding: 0.65rem 0.85rem;
+      border: var(--border);
+      background: white;
+      color: var(--ink);
+      outline: none;
+      transition: box-shadow 0.15s;
+      width: 100%;
+    }
+    .field input:focus { box-shadow: 3px 3px 0 var(--ink); }
+
+    .login-btn {
+      width: 100%;
+      margin-top: 0.5rem;
+      font-family: 'Space Mono', monospace;
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.85em;
+      border: var(--border);
+      background: var(--ink);
+      color: var(--paper);
+      cursor: pointer;
+      transition: background 0.15s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+    }
+    .login-btn:hover { background: #3a2a18; }
+    .login-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+    .error-msg {
+      margin-top: 1rem;
+      padding: 0.7rem 0.9rem;
+      border-left: 4px solid var(--red);
+      background: rgba(200,55,45,0.07);
+      font-size: 0.82rem;
+      color: var(--red);
+      display: none;
+    }
+    .error-msg.show { display: block; }
+
+    .spinner {
+      display: inline-block;
+      width: 14px; height: 14px;
+      border: 2px solid rgba(245,240,232,0.35);
+      border-top-color: var(--paper);
+      border-radius: 50%;
+      animation: spin 0.6s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    .login-footer {
+      margin-top: 1.5rem;
+      font-family: 'Space Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.08em;
+      text-align: center;
+      color: rgba(26,16,8,0.3);
+    }
+  </style>
+</head>
+<body>
+  <div class="login-card">
+    <a href="/" class="login-logo">Motormouth<span>.</span></a>
+    <div class="login-eyebrow">Admin Panel</div>
+    <hr class="login-divider" />
+
+    <form id="loginForm" onsubmit="handleLogin(event)">
+      <div class="field">
+        <label for="username">Username</label>
+        <input id="username" type="text" autocomplete="username" autocapitalize="none" spellcheck="false" required />
+      </div>
+      <div class="field">
+        <label for="password">Password</label>
+        <input id="password" type="password" autocomplete="current-password" required />
+      </div>
+      <div class="error-msg" id="errorMsg"></div>
+      <button class="login-btn" id="loginBtn" type="submit">
+        <span id="btnLabel">Sign in</span>
+      </button>
+    </form>
+
+    <div class="login-footer">Motormouth / Lily Langley</div>
+  </div>
+
+  <script>
+    // Focus username on load
+    document.getElementById('username').focus();
+
+    async function handleLogin(e) {
+      e.preventDefault();
+      const btn      = document.getElementById('loginBtn');
+      const label    = document.getElementById('btnLabel');
+      const errorEl  = document.getElementById('errorMsg');
+      const username = document.getElementById('username').value.trim();
+      const password = document.getElementById('password').value;
+
+      btn.disabled = true;
+      label.innerHTML = '<span class="spinner"></span>';
+      errorEl.classList.remove('show');
+
+      try {
+        const res = await fetch('/api/login', {
+          method:  'POST',
+          headers: {'Content-Type': 'application/json'},
+          body:    JSON.stringify({ username, password })
+        });
+        const data = await res.json();
+
+        if (res.ok && data.ok) {
+          // Redirect to admin
+          window.location.href = '/admin/';
+        } else {
+          errorEl.textContent = data.error || 'Incorrect username or password.';
+          errorEl.classList.add('show');
+          document.getElementById('password').value = '';
+          document.getElementById('password').focus();
+        }
+      } catch (_) {
+        errorEl.textContent = 'Could not connect — is admin.py running?';
+        errorEl.classList.add('show');
+      }
+
+      btn.disabled = false;
+      label.textContent = 'Sign in';
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Motormouth — Art by Lily Langley</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@300;400;500;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="nav">
+    <a href="index.html" class="nav-logo">Motormouth<span>.</span></a>
+    <button class="nav-burger" id="burgerBtn" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="works.html">Works</a></li>
+      <li><a href="exhibitions.html">Exhibitions</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-left">
+      <p class="hero-eyebrow">Art by Lily Langley · Sydney</p>
+      <h1 class="hero-name">Motor<br>mouth</h1>
+      <p class="hero-tagline">Visual narratives drawn from memories, urban legends, daydreams and nightmares. Exploring queer stories, generational trauma, and human connection through the lens of the larrikin.</p>
+      <div class="hero-ctas">
+        <a href="works.html" class="btn btn-primary">View Works</a>
+        <a href="exhibitions.html" class="btn btn-secondary">Exhibitions</a>
+      </div>
+      <div class="hero-scroll">Scroll</div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-art">
+        <img src="images/hero.jpeg" alt="Motormouth Comics" style="width:100%;height:100%;object-fit:cover;display:block;" />
+      </div>
+    </div>
+  </section>
+
+  <!-- TICKER -->
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-inner">
+      <span>BINCH</span><span>✦</span>
+      <span>BINCHY</span><span>✦</span>
+      <span>BINCHINGTON</span><span>✦</span>
+      <span>BINCHANATOR</span><span>✦</span>
+      <span>CHRISTMAS BINCH</span><span>✦</span>
+      <span>OSAMA BINCH LADEN</span><span>✦</span>
+      <span>BINCH</span><span>✦</span>
+      <span>BINCHY</span><span>✦</span>
+      <span>BINCHINGTON</span><span>✦</span>
+      <span>BINCHANATOR</span><span>✦</span>
+      <span>CHRISTMAS BINCH</span><span>✦</span>
+      <span>OSAMA BINCH LADEN</span><span>✦</span>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <div class="about-grid reveal">
+        <div class="about-visual">
+          <img src="images/about.jpg" alt="Lily Langley" style="width:100%;height:100%;object-fit:cover;display:block;" />
+        </div>
+        <div class="about-text">
+          <div>
+            <span class="tag">About</span>
+            <h2 class="section-title" style="margin-top:0.5rem;font-size:clamp(2.5rem,5vw,4.5rem)">Motor<br>mouth</h2>
+            <p style="font-family:'Space Mono',monospace;font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--red);margin-top:0.5rem;">Lily Langley</p>
+          </div>
+          <p class="about-bio">
+            Lily Langley is an emerging contemporary artist who utilises visual storytelling and character creation to envisage alternate realities, often appropriating the masculine laconic figure of the Larrikin to tell queer narratives of generational trauma, substance abuse, mateship and camaraderie.
+          </p>
+          <p class="about-bio">
+            Growing up on the outermost edge of suburban Sydney, she has always had a fascination with the spinning of a good yarn; who gets to tell the story, where does it fragment, where does reality and fiction blur? Through a multidisciplinary practice of printmaking, ink drawing and sculpting, her works are threads of narrative that emerge from memories, urban legends, daydreams and nightmares alike.
+          </p>
+          <p class="about-bio">
+            In 2021, Lily Langley was selected for the Tim Olsen Drawing Prize and graduated with Honours from her Bachelor of Fine Arts at UNSW Art &amp; Design.
+          </p>
+          <div class="about-facts">
+            <div class="fact-item">
+              <div class="fact-label">Education</div>
+              <div class="fact-value">BFA Honours<br>UNSW Art &amp; Design, 2021</div>
+            </div>
+            <div class="fact-item">
+              <div class="fact-label">Recognition</div>
+              <div class="fact-value">Tim Olsen Drawing Prize<br>Finalist, 2021</div>
+            </div>
+            <div class="fact-item">
+              <div class="fact-label">Location</div>
+              <div class="fact-value">Sydney, Australia</div>
+            </div>
+            <div class="fact-item">
+              <div class="fact-label">Practice</div>
+              <div class="fact-value">Printmaking · Ink<br>Sculpture</div>
+            </div>
+          </div>
+          <div class="about-press">
+            <div class="press-label">Press &amp; Publications</div>
+            <div class="press-list">
+              <span class="press-pill">Art/Edit + Interior Design '24</span>
+              <span class="press-pill">The Mercury '23</span>
+              <span class="press-pill">Booker Magazine '23</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <div class="reveal" style="margin-bottom:3rem">
+        <span class="tag">Get in Touch</span>
+        <h2 class="section-title" style="margin-top:0.5rem">Contact</h2>
+      </div>
+      <div class="contact-grid">
+        <form class="contact-form reveal" onsubmit="handleFormSubmit(event)">
+          <div class="form-group">
+            <label class="form-label" for="fname">Name</label>
+            <input class="form-input" type="text" id="fname" placeholder="Your name" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="femail">Email</label>
+            <input class="form-input" type="email" id="femail" placeholder="your@email.com" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="fsubject">Subject</label>
+            <input class="form-input" type="text" id="fsubject" placeholder="Artwork enquiry, press, commission…" />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="fmsg">Message</label>
+            <textarea class="form-textarea" id="fmsg" placeholder="Tell me what you're after…" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="align-self:flex-start">Send Message</button>
+          <p id="formMsg" style="font-family:'Space Mono',monospace;font-size:0.7rem;color:var(--red);display:none;"></p>
+        </form>
+        <div class="contact-info reveal">
+          <div>
+            <div class="contact-item-label">Email</div>
+            <div class="contact-item-value">hello@motormouthcomics.com</div>
+          </div>
+          <div>
+            <div class="contact-item-label">Based in</div>
+            <div class="contact-item-value">Sydney, New South Wales<br>Australia</div>
+          </div>
+          <div>
+            <div class="contact-item-label">Follow</div>
+            <div class="social-links">
+              <a href="https://www.instagram.com/motormouthcomics/" class="social-link" target="_blank" rel="noopener">Instagram</a>
+            </div>
+          </div>
+          <div>
+            <div class="contact-item-label">Representation &amp; Enquiries</div>
+            <div class="contact-item-value" style="font-size:0.9rem;line-height:1.7;color:#6b5f50;">
+              Available for commissions, exhibitions, and press enquiries. Please allow up to 5 business days for a response.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTERSTITIAL IMAGE -->
+  <div style="width:100%;max-height:70vh;overflow:hidden;line-height:0;">
+    <img src="https://motormouthcomics.com/wp-content/uploads/2025/10/langley_miss-amelia_20201208_18970.png?w=2048" alt="Lily Langley" style="width:100%;max-height:70vh;object-fit:cover;object-position:center top;display:block;" />
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <a href="index.html" class="footer-logo">Motormouth<span>.</span></a>
+    <div class="footer-copy">© 2025 Motormouth / Lily Langley — All rights reserved</div>
+  </footer>
+
+  <script>
+    document.getElementById('burgerBtn').addEventListener('click', () => {
+      document.getElementById('navLinks').classList.toggle('open');
+    });
+    document.querySelectorAll('#navLinks a').forEach(a => {
+      a.addEventListener('click', () => document.getElementById('navLinks').classList.remove('open'));
+    });
+
+    const revealEls = document.querySelectorAll('.reveal');
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          setTimeout(() => e.target.classList.add('visible'), 60 * (Array.from(revealEls).indexOf(e.target) % 4));
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    revealEls.forEach(el => io.observe(el));
+
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      const btn = e.target.querySelector('button[type=submit]');
+      const msg = document.getElementById('formMsg');
+      btn.textContent = 'Sending…';
+      btn.disabled = true;
+      setTimeout(() => {
+        btn.textContent = 'Sent ✓';
+        msg.textContent = "Thanks! I'll be in touch within a few days.";
+        msg.style.color = 'var(--ink)';
+        msg.style.display = 'block';
+      }, 900);
+    }
+  </script>
+</body>
+</html>

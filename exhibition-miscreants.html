@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>'Miscreants' — Motormouth</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@300;400;500;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav id="nav">
+    <a href="index.html" class="nav-logo">Motormouth<span>.</span></a>
+    <button class="nav-burger" id="burgerBtn" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="works.html">Works</a></li>
+      <li><a href="exhibitions.html" class="active">Exhibitions</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="exh-hero">
+    <div class="exh-hero-bg" style="background: radial-gradient(ellipse at 30% 70%, #6b1a14 0%, transparent 65%);"></div>
+    <div class="exh-hero-inner">
+      <div style="margin-bottom:1.2rem"><a href="exhibitions.html" style="font-family:'Space Mono',monospace;font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(245,240,232,0.4);text-decoration:none;">← All Exhibitions</a></div>
+      <div class="exh-hero-meta">
+        <span>Solo Show</span>
+        <span>Prop Gallery, Sydney</span>
+        <span>31 January – 9 February 2025</span>
+      </div>
+      <h1 class="exh-hero-title">'Miscreants'</h1>
+      <p class="exh-hero-tagline">A rogue's gallery of larrikins, troublemakers, and tenderly rendered portraits of defiance — characters who exist just outside the rules.</p>
+    </div>
+  </div>
+
+  <div class="exh-detail-body">
+    <div class="container">
+      <div class="exh-detail-grid">
+        <div class="exh-detail-sidebar reveal">
+          <div class="exh-detail-label">Venue</div>
+          <div class="exh-detail-value">Prop Gallery<br>Sydney, NSW</div>
+          <div class="exh-detail-label">Dates</div>
+          <div class="exh-detail-value">31 January – 9 February 2025</div>
+          <div class="exh-detail-label">Type</div>
+          <div class="exh-detail-value">Solo Exhibition</div>
+        </div>
+        <div class="exh-detail-text reveal">
+          <p><em>/ˈmɪskriənt/ (noun): a person who has done something wrong or unlawful. A person behaving badly.</em></p>
+          <p>We are eels on the grass in the hot hot sun, slithering desperately for the lake, finding only dwindling pools. Our bodies tire, our once-soft skin blisters and bursts as gills choke on air. Do not despair; this is from no moral failing. You cannot find the lake because it was taken from you. Bit by bit it was drained, poisoned, filled in for a carpark, petrol station, new subdivision. The next puddle isn't far now, let's go there together. If we make it I'll buy you a drink.</p>
+          <p>Special thanks to: Prop Gallery, Grifter Brewing, Nat's dad for giving me his sofa, Kevin Mund for lending me his ute to deliver it, Lauren Mund for heavy lifting, and my friend Victoria from flying in from Melbourne to come see the show.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- PHOTOS -->
+  <div class="photo-section">
+    <div class="container">
+      <span class="tag">From the Exhibition</span>
+      <div class="photo-grid">
+
+        <div class="photo-item reveal" data-title="Good Luck Darling, 2024. Acrylic on irregular board, nipple piercing bar, gold star stickers, 60 x 78 cm" data-year="2025" onclick="openPhoto(this)">
+          <img src="https://motormouthcomics.com/wp-content/uploads/2025/10/336915ce-cdbe-4b74-9199-0f04a1dfb693.jpg" alt="Good Luck Darling, 2024. Acrylic on irregular board, nipple piercing bar, gold star stickers, 60 x 78 cm" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+          <div class="photo-caption">
+            <div class="photo-caption-title">Good Luck Darling, 2024. Acrylic on irregular board, nipple piercing bar, gold star stickers, 60 x 78 cm</div>
+          </div>
+        </div>
+        <div class="photo-item reveal" data-title="Hostage Situation, 2024. Acrylic on board, 60 x 89 cm." data-year="2025" onclick="openPhoto(this)">
+          <img src="https://motormouthcomics.com/wp-content/uploads/2025/10/img_5988.jpg" alt="Hostage Situation, 2024. Acrylic on board, 60 x 89 cm." loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+          <div class="photo-caption">
+            <div class="photo-caption-title">Hostage Situation, 2024. Acrylic on board, 60 x 89 cm.</div>
+          </div>
+        </div>
+        <div class="photo-item reveal" data-title="Real Bad Lookin', 2024. Ink on paper, 57 x 76 cm." data-year="2025" onclick="openPhoto(this)">
+          <img src="https://motormouthcomics.com/wp-content/uploads/2025/10/img_5984.jpg" alt="Real Bad Lookin', 2024. Ink on paper, 57 x 76 cm." loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+          <div class="photo-caption">
+            <div class="photo-caption-title">Real Bad Lookin', 2024. Ink on paper, 57 x 76 cm.</div>
+          </div>
+        </div>
+        <div class="photo-item reveal" data-title="That's Rough, 2024. Ink on paper, 57 x 76 cm and Cum Sock, 2024. Dirty sock, thread, PVA, 30 x 6 cm" data-year="2025" onclick="openPhoto(this)">
+          <img src="https://motormouthcomics.com/wp-content/uploads/2025/10/img_5986.jpg" alt="That's Rough, 2024. Ink on paper, 57 x 76 cm and Cum Sock, 2024. Dirty sock, thread, PVA, 30 x 6 cm" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+          <div class="photo-caption">
+            <div class="photo-caption-title">That's Rough, 2024. Ink on paper, 57 x 76 cm and Cum Sock, 2024. Dirty sock, thread, PVA, 30 x 6 cm</div>
+          </div>
+        </div>
+        <div class="photo-item reveal" data-title="Global House Warming, 2024. Acrylic on board, 60 x 75 cm" data-year="2025" onclick="openPhoto(this)">
+          <img src="https://motormouthcomics.com/wp-content/uploads/2025/10/img_5983.jpg" alt="Global House Warming, 2024. Acrylic on board, 60 x 75 cm" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+          <div class="photo-caption">
+            <div class="photo-caption-title">Global House Warming, 2024. Acrylic on board, 60 x 75 cm</div>
+          </div>
+        </div>
+        <div class="photo-item reveal" data-title="The Plate is Warming, My Heart is Full, 2024. Acrylic on board" data-year="2025" onclick="openPhoto(this)">
+          <img src="https://motormouthcomics.com/wp-content/uploads/2025/10/img_5985.jpg" alt="The Plate is Warming, My Heart is Full, 2024. Acrylic on board" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+          <div class="photo-caption">
+            <div class="photo-caption-title">The Plate is Warming, My Heart is Full, 2024. Acrylic on board</div>
+          </div>
+        </div>
+        <div class="photo-item reveal" data-title="A Haiku, 2025. Acrylic on board, gold star stickers, 20 x 24 cm" data-year="2025" onclick="openPhoto(this)">
+          <img src="https://motormouthcomics.com/wp-content/uploads/2025/10/img_5989.jpg" alt="A Haiku, 2025. Acrylic on board, gold star stickers, 20 x 24 cm" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+          <div class="photo-caption">
+            <div class="photo-caption-title">A Haiku, 2025. Acrylic on board, gold star stickers, 20 x 24 cm</div>
+          </div>
+        </div>
+        <div class="photo-item reveal" data-title="&quot;I Saw I Saw the TV Glow&quot;, 2025. Acrylic on board, Shell Merchandise sticker, 60 x 89 cm" data-year="2025" onclick="openPhoto(this)">
+          <img src="https://motormouthcomics.com/wp-content/uploads/2025/10/4ff97010-336c-43b4-b378-a67ea2997149.jpg" alt="&quot;I Saw I Saw the TV Glow&quot;, 2025. Acrylic on board, Shell Merchandise sticker, 60 x 89 cm" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+          <div class="photo-caption">
+            <div class="photo-caption-title">"I Saw I Saw the TV Glow", 2025. Acrylic on board, Shell Merchandise sticker, 60 x 89 cm</div>
+          </div>
+        </div>
+        <div class="photo-item reveal" data-title="Daily Report, 2024. Ink on paper, 30 x 41 cm" data-year="2025" onclick="openPhoto(this)">
+          <img src="https://motormouthcomics.com/wp-content/uploads/2025/10/90dd76b9-9cc1-43c7-bbf7-23ad33a477b6.jpg" alt="Daily Report, 2024. Ink on paper, 30 x 41 cm" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+          <div class="photo-caption">
+            <div class="photo-caption-title">Daily Report, 2024. Ink on paper, 30 x 41 cm</div>
+          </div>
+        </div>
+        <div class="photo-item reveal" data-title="&quot;Darling how I love you, one thong on and when you smiled I Choked on my drink&quot;, 2024. Glazed ceramic tablet and chain, 23 x 11 cm" data-year="2025" onclick="openPhoto(this)">
+          <img src="https://motormouthcomics.com/wp-content/uploads/2025/10/img_5991.jpg" alt="&quot;Darling how I love you, one thong on and when you smiled I Choked on my drink&quot;, 2024. Glazed ceramic tablet and chain, 23 x 11 cm" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+          <div class="photo-caption">
+            <div class="photo-caption-title">"Darling how I love you, one thong on and when you smiled I Choked on my drink", 2024. Glazed ceramic tablet and chain, 23 x 11 cm</div>
+          </div>
+        </div>
+        <div class="photo-item reveal" data-title="Artist with Weapon, 2025. Opening night" data-year="2025" onclick="openPhoto(this)">
+          <img src="https://motormouthcomics.com/wp-content/uploads/2025/10/dsc05158.jpeg" alt="Artist with Weapon, 2025. Opening night" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+          <div class="photo-caption">
+            <div class="photo-caption-title">Artist with Weapon, 2025. Opening night</div>
+          </div>
+        </div>
+        <div class="photo-item reveal" data-title="&quot;On the way here tonight…&quot;, 2025. Sofa, paint, 150 x 80 x 88 cm" data-year="2025" onclick="openPhoto(this)">
+          <img src="https://motormouthcomics.com/wp-content/uploads/2025/10/img_6004.jpg" alt="&quot;On the way here tonight…&quot;, 2025. Sofa, paint, 150 x 80 x 88 cm" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+          <div class="photo-caption">
+            <div class="photo-caption-title">"On the way here tonight…", 2025. Sofa, paint, 150 x 80 x 88 cm</div>
+          </div>
+        </div>
+        <div class="photo-item reveal" data-title="Weapon, 2025. Acrylic on board with stand, 84 x 178 x 61 cm" data-year="2025" onclick="openPhoto(this)">
+          <img src="https://motormouthcomics.com/wp-content/uploads/2025/10/img_6006.jpg" alt="Weapon, 2025. Acrylic on board with stand, 84 x 178 x 61 cm" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+          <div class="photo-caption">
+            <div class="photo-caption-title">Weapon, 2025. Acrylic on board with stand, 84 x 178 x 61 cm</div>
+          </div>
+        </div>
+        <div class="photo-item reveal" data-title="Weapon, 2025 (detail)" data-year="2025" onclick="openPhoto(this)">
+          <img src="https://motormouthcomics.com/wp-content/uploads/2025/10/img_6007.jpg" alt="Weapon, 2025 (detail)" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+          <div class="photo-caption">
+            <div class="photo-caption-title">Weapon, 2025 (detail)</div>
+          </div>
+        </div>
+        <div class="photo-item reveal" data-title="Install view of artist" data-year="2025" onclick="openPhoto(this)">
+          <img src="https://motormouthcomics.com/wp-content/uploads/2025/10/img_6258.jpg" alt="Install view of artist" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+          <div class="photo-caption">
+            <div class="photo-caption-title">Install view of artist</div>
+          </div>
+        </div>
+        <div class="photo-item reveal" data-title="Opening night view" data-year="2025" onclick="openPhoto(this)">
+          <img src="https://motormouthcomics.com/wp-content/uploads/2025/10/img_9310.jpg" alt="Opening night view" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+          <div class="photo-caption">
+            <div class="photo-caption-title">Opening night view</div>
+          </div>
+        </div>
+        <div class="photo-item reveal" data-title="Opening night view" data-year="2025" onclick="openPhoto(this)">
+          <img src="https://motormouthcomics.com/wp-content/uploads/2025/10/img_9305.jpg" alt="Opening night view" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+          <div class="photo-caption">
+            <div class="photo-caption-title">Opening night view</div>
+          </div>
+        </div>
+        <div class="photo-item reveal" data-title="Living Room Rug, 2022. Wool tufted Rug, 92 x 145 cm" data-year="2025" onclick="openPhoto(this)">
+          <img src="https://motormouthcomics.com/wp-content/uploads/2025/10/img_9302.jpg" alt="Living Room Rug, 2022. Wool tufted Rug, 92 x 145 cm" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+          <div class="photo-caption">
+            <div class="photo-caption-title">Living Room Rug, 2022. Wool tufted Rug, 92 x 145 cm</div>
+          </div>
+        </div>
+        <div class="photo-item reveal" data-title="Exhibition photo" data-year="2025" onclick="openPhoto(this)">
+          <img src="https://motormouthcomics.com/wp-content/uploads/2025/10/screen-shot-2025-10-06-at-12.45.50-pm.png" alt="Exhibition photo" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+        </div>
+        <div class="photo-item reveal" data-title="Miscreants — Exhibition Poster" data-year="2025" onclick="openPhoto(this)">
+          <img src="https://motormouthcomics.com/wp-content/uploads/2025/10/miscreants1.png" alt="Miscreants — Exhibition Poster" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+          <div class="photo-caption">
+            <div class="photo-caption-title">Miscreants — Exhibition Poster</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="exh-nav-strip">
+    <a href="exhibition-hoons-goons.html" class="exh-nav-link">
+      <span class="exh-nav-dir">← Previous Show</span>
+      <span class="exh-nav-name">'Hoons &amp; Goons'</span>
+    </a>
+    <a href="exhibition-crocodile.html" class="exh-nav-link" style="text-align:right">
+      <span class="exh-nav-dir">Next Show →</span>
+      <span class="exh-nav-name">'The Crocodile'</span>
+    </a>
+  </div>
+
+  <footer>
+    <a href="index.html" class="footer-logo">Motormouth<span>.</span></a>
+    <div class="footer-copy">© 2025 Motormouth / Lily Langley — All rights reserved</div>
+  </footer>
+
+  <div id="photo-lightbox" onclick="if(event.target===this)closePhoto()">
+    <div class="photo-lightbox-inner">
+      <button class="photo-lightbox-close" onclick="closePhoto()">✕</button>
+      <div id="plbContent"></div>
+      <div class="photo-lightbox-caption"><strong id="plbTitle"></strong><span id="plbYear"></span></div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('burgerBtn').addEventListener('click', () => document.getElementById('navLinks').classList.toggle('open'));
+    const io = new IntersectionObserver(entries => entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } }), { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+    function openPhoto(el) {
+      const img = el.querySelector('img');
+      const svg = el.querySelector('svg');
+      document.getElementById('plbContent').innerHTML = img
+        ? `<img src="${img.src}" alt="${img.alt}" style="max-width:100%;max-height:80vh;object-fit:contain;display:block;margin:auto;">`
+        : svg.outerHTML;
+      document.getElementById('plbTitle').textContent = el.dataset.title;
+      document.getElementById('plbYear').textContent = el.dataset.year;
+      document.getElementById('photo-lightbox').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closePhoto() {
+      document.getElementById('photo-lightbox').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closePhoto(); });
+  </script>
+</body>
+</html>

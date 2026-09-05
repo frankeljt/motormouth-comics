@@ -1,0 +1,145 @@
+[
+  {
+    "id": "death-in-suburbia",
+    "title": "Death in Suburbia",
+    "year": "2021",
+    "type": "print",
+    "selling": false,
+    "price": null,
+    "edition": "Edition of 5",
+    "image": "https://motormouthcomics.com/wp-content/uploads/2025/10/img_2316.jpg",
+    "description": "Collagraph"
+  },
+  {
+    "id": "love",
+    "title": "Love",
+    "year": "2025",
+    "type": "print",
+    "selling": false,
+    "price": null,
+    "edition": null,
+    "image": "https://motormouthcomics.com/wp-content/uploads/2025/10/img_7769.jpg",
+    "description": "Ink on paper"
+  },
+  {
+    "id": "goodnight-darling",
+    "title": "Goodnight Darling",
+    "year": "2025",
+    "type": "print",
+    "selling": false,
+    "price": null,
+    "edition": null,
+    "image": "https://motormouthcomics.com/wp-content/uploads/2025/10/img_7771.jpg",
+    "description": "Ink and chalk pastel on paper, A4"
+  },
+  {
+    "id": "heel",
+    "title": "Heel",
+    "year": "2025",
+    "type": "print",
+    "selling": false,
+    "price": null,
+    "edition": null,
+    "image": "https://motormouthcomics.com/wp-content/uploads/2025/10/img_7956.jpg",
+    "description": "Ink on paper"
+  },
+  {
+    "id": "devil-wilson",
+    "title": "Devil Wilson",
+    "year": "2023",
+    "type": "print",
+    "selling": false,
+    "price": null,
+    "edition": null,
+    "image": "https://motormouthcomics.com/wp-content/uploads/2025/10/img_7773.jpg",
+    "description": "Ink on paper"
+  },
+  {
+    "id": "dinner-guest",
+    "title": "Dinner Guest",
+    "year": "2022",
+    "type": "painting",
+    "selling": false,
+    "price": null,
+    "edition": null,
+    "image": "https://motormouthcomics.com/wp-content/uploads/2025/10/img_7775.jpg",
+    "description": "Gouache and ink on paper"
+  },
+  {
+    "id": "hostage-situation",
+    "title": "Hostage Situation",
+    "year": "2024",
+    "type": "painting",
+    "selling": false,
+    "price": null,
+    "edition": null,
+    "image": "https://motormouthcomics.com/wp-content/uploads/2025/10/img_5988.jpg",
+    "description": "Acrylic on board, 60 x 89 cm"
+  },
+  {
+    "id": "real-bad-lookin",
+    "title": "Real Bad Lookin'",
+    "year": "2024",
+    "type": "print",
+    "selling": false,
+    "price": null,
+    "edition": null,
+    "image": "https://motormouthcomics.com/wp-content/uploads/2025/10/img_5984.jpg",
+    "description": "Ink on paper, 57 x 76 cm"
+  },
+  {
+    "id": "global-house-warming",
+    "title": "Global House Warming",
+    "year": "2024",
+    "type": "painting",
+    "selling": false,
+    "price": null,
+    "edition": null,
+    "image": "https://motormouthcomics.com/wp-content/uploads/2025/10/img_5983.jpg",
+    "description": "Acrylic on board, 60 x 75 cm"
+  },
+  {
+    "id": "party-animal",
+    "title": "party animal",
+    "year": "2023",
+    "type": "painting",
+    "selling": false,
+    "price": null,
+    "edition": null,
+    "image": "https://motormouthcomics.com/wp-content/uploads/2025/10/fd6b5083-ac6b-46c9-ad49-da5a5c112676.jpeg",
+    "description": "Coloured pencil and gouache on paper, 57 x 76 cm"
+  },
+  {
+    "id": "feral",
+    "title": "Feral",
+    "year": "2022",
+    "type": "print",
+    "selling": false,
+    "price": null,
+    "edition": null,
+    "image": "https://motormouthcomics.com/wp-content/uploads/2025/10/feral.jpg",
+    "description": "Ink on paper, 57 x 76 cm"
+  },
+  {
+    "id": "inheritance",
+    "title": "Inheritance",
+    "year": "2023",
+    "type": "print",
+    "selling": false,
+    "price": null,
+    "edition": null,
+    "image": "https://motormouthcomics.com/wp-content/uploads/2025/10/sins-of-the-father.jpg",
+    "description": "Ink on paper, A3"
+  },
+  {
+    "id": "scotch-broom-feral-pig",
+    "title": "Scotch Broom, Feral Pig",
+    "year": "2022",
+    "type": "print",
+    "selling": false,
+    "price": null,
+    "edition": null,
+    "image": "https://motormouthcomics.com/wp-content/uploads/2025/10/langley_lily_scotchbroomferalpig.jpg",
+    "description": "Ink on paper, 57 x 76 cm"
+  }
+]

@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Motormouth Admin</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@300;400;500;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --ink:    #1a1008;
+      --paper:  #f5f0e8;
+      --cream:  #ede8dc;
+      --red:    #c8372d;
+      --yellow: #f0c233;
+      --border: 2px solid var(--ink);
+      --sidebar: 220px;
+      --header:  56px;
+    }
+
+    body {
+      font-family: 'Space Grotesk', sans-serif;
+      background: #f0ece2;
+      color: var(--ink);
+      min-height: 100vh;
+    }
+
+    /* ── HEADER ─────────────────────────────────────────────────────────── */
+    #header {
+      position: fixed; top: 0; left: 0; right: 0; height: var(--header);
+      background: var(--ink); color: var(--paper);
+      display: flex; align-items: center; padding: 0 1.5rem;
+      z-index: 100; gap: 1rem;
+    }
+    .header-logo {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.35rem; letter-spacing: 0.08em;
+      color: var(--paper); text-decoration: none;
+    }
+    .header-logo span { color: var(--red); }
+    .header-badge {
+      font-family: 'Space Mono', monospace; font-size: 0.6rem;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      background: var(--red); color: var(--paper);
+      padding: 0.2em 0.6em; border-radius: 2px;
+    }
+    .header-spacer { flex: 1; }
+    .header-viewsite {
+      font-family: 'Space Mono', monospace; font-size: 0.65rem;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: rgba(245,240,232,0.5); text-decoration: none;
+      transition: color 0.15s;
+    }
+    .header-viewsite:hover { color: var(--yellow); }
+
+    /* ── SIDEBAR ────────────────────────────────────────────────────────── */
+    #sidebar {
+      position: fixed; top: var(--header); left: 0; bottom: 0;
+      width: var(--sidebar);
+      background: var(--ink); color: var(--paper);
+      padding: 1.5rem 0; display: flex; flex-direction: column; gap: 0.2rem;
+      z-index: 90;
+    }
+    .nav-section-label {
+      font-family: 'Space Mono', monospace; font-size: 0.55rem;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      color: rgba(245,240,232,0.35);
+      padding: 0.6rem 1.4rem 0.3rem;
+    }
+    .nav-item {
+      display: flex; align-items: center; gap: 0.75rem;
+      padding: 0.7rem 1.4rem; cursor: pointer;
+      color: rgba(245,240,232,0.6);
+      font-size: 0.9rem; font-weight: 500;
+      transition: color 0.15s, background 0.15s;
+      border-left: 3px solid transparent;
+      text-decoration: none;
+    }
+    .nav-item:hover { color: var(--paper); background: rgba(255,255,255,0.05); }
+    .nav-item.active {
+      color: var(--paper); border-left-color: var(--red);
+      background: rgba(255,255,255,0.06);
+    }
+    .nav-item .nav-icon { font-size: 1rem; opacity: 0.8; }
+    .nav-count {
+      margin-left: auto;
+      font-family: 'Space Mono', monospace; font-size: 0.6rem;
+      background: rgba(255,255,255,0.1); border-radius: 10px;
+      padding: 0.1em 0.55em; color: rgba(245,240,232,0.5);
+    }
+
+    /* ── MAIN ───────────────────────────────────────────────────────────── */
+    #main {
+      margin-top: var(--header);
+      margin-left: var(--sidebar);
+      padding: 2.5rem 2.5rem 4rem;
+      min-height: calc(100vh - var(--header));
+    }
+
+    .section { display: none; }
+    .section.active { display: block; }
+
+    .section-header {
+      display: flex; align-items: center; gap: 1rem;
+      margin-bottom: 2rem; padding-bottom: 1.2rem;
+      border-bottom: var(--border);
+    }
+    .section-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2.2rem; letter-spacing: 0.05em;
+    }
+    .section-sub {
+      font-family: 'Space Mono', monospace; font-size: 0.7rem;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      color: rgba(26,16,8,0.4); margin-top: 0.1rem;
+    }
+    .section-header-actions { margin-left: auto; }
+
+    /* ── BUTTONS ────────────────────────────────────────────────────────── */
+    .btn {
+      font-family: 'Space Mono', monospace; font-size: 0.65rem;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      padding: 0.55em 1.3em; border: var(--border);
+      background: transparent; color: var(--ink);
+      cursor: pointer; transition: background 0.15s, color 0.15s;
+    }
+    .btn:hover { background: var(--ink); color: var(--paper); }
+    .btn-primary { background: var(--ink); color: var(--paper); }
+    .btn-primary:hover { background: #3a2a18; }
+    .btn-red { background: var(--red); border-color: var(--red); color: var(--paper); }
+    .btn-red:hover { background: #a82d24; border-color: #a82d24; }
+    .btn-sm { padding: 0.35em 0.9em; font-size: 0.58rem; }
+    .btn-icon {
+      background: none; border: none; cursor: pointer; padding: 0.3rem;
+      color: rgba(26,16,8,0.4); font-size: 1rem; line-height: 1;
+      transition: color 0.15s;
+    }
+    .btn-icon:hover { color: var(--ink); }
+    .btn-icon.danger:hover { color: var(--red); }
+
+    /* ── WORKS GRID ─────────────────────────────────────────────────────── */
+    .works-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 1.25rem;
+      align-items: start;
+    }
+
+    .admin-card {
+      background: var(--paper); border: var(--border);
+      box-shadow: 4px 4px 0 var(--ink);
+      display: flex; flex-direction: column;
+      cursor: pointer; transition: transform 0.12s, box-shadow 0.12s;
+    }
+    .admin-card:hover { transform: translate(-2px,-2px); box-shadow: 6px 6px 0 var(--ink); }
+
+    .admin-card-img {
+      aspect-ratio: 4/5; overflow: hidden;
+      background: #d8d3c8; position: relative;
+      display: flex; align-items: center; justify-content: center;
+      background-size: cover; background-position: center;
+    }
+    .admin-card-img img { width:100%; height:100%; object-fit:cover; display:block; }
+    .placeholder-type {
+      font-family: 'Bebas Neue', sans-serif; font-size: 1.1rem;
+      letter-spacing: 0.1em; color: rgba(26,16,8,0.25);
+    }
+    .admin-card-body { padding: 0.9rem 0.9rem 0.6rem; flex: 1; }
+    .admin-card-title { font-weight: 700; font-size: 0.9rem; margin-bottom: 0.3rem; }
+    .admin-card-meta {
+      display: flex; gap: 0.5rem; align-items: center;
+      margin-bottom: 0.4rem;
+    }
+    .badge {
+      font-family: 'Space Mono', monospace; font-size: 0.55rem;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      padding: 0.15em 0.55em; border: 1.5px solid var(--ink);
+    }
+    .badge-print   { background: #c8d4c0; }
+    .badge-painting { background: #ddd8c4; }
+    .badge-sculpture{ background: #c8c0b0; }
+    .badge-solo     { background: var(--paper); }
+    .badge-group    { background: #e8e0d0; }
+    .badge-upcoming { background: var(--yellow); border-color: var(--yellow); }
+    .admin-card-price {
+      font-family: 'Space Mono', monospace; font-size: 0.7rem;
+      color: var(--red); font-weight: 700;
+    }
+    .admin-card-price.nfs { color: rgba(26,16,8,0.35); font-weight: 400; }
+    .admin-card-actions {
+      display: flex; border-top: var(--border);
+    }
+    .admin-card-actions button {
+      flex: 1; padding: 0.55rem; border: none; background: none;
+      font-family: 'Space Mono', monospace; font-size: 0.6rem;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      cursor: pointer; transition: background 0.12s, color 0.12s;
+      color: var(--ink);
+    }
+    .admin-card-actions button:first-child { border-right: var(--border); }
+    .admin-card-actions button:hover { background: var(--ink); color: var(--paper); }
+    .admin-card-actions button.del:hover { background: var(--red); color: var(--paper); }
+
+    /* ── EXHIBITIONS LIST ────────────────────────────────────────────────── */
+    .exh-list { display: flex; flex-direction: column; gap: 0; }
+    .exh-row {
+      display: flex; align-items: center; gap: 1.25rem;
+      padding: 1rem 1.2rem; background: var(--paper);
+      border: var(--border); margin-top: -1px;
+      transition: background 0.12s;
+    }
+    .exh-row:hover { background: var(--cream); }
+    /* col 1: title + venue */
+    .exh-row-info { flex: 1 1 0; min-width: 0; }
+    .exh-row-title {
+      font-weight: 700; font-size: 0.92rem;
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    }
+    .exh-row-sub {
+      font-size: 0.78rem; color: rgba(26,16,8,0.5);
+      margin-top: 0.15rem;
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    }
+    /* col 2: dates */
+    .exh-row-dates {
+      flex: 0 0 auto; width: 170px;
+      font-size: 0.78rem; color: rgba(26,16,8,0.6); line-height: 1.4;
+    }
+    /* col 3: badges */
+    .exh-row-badges {
+      flex: 0 0 auto; width: 72px;
+      display: flex; flex-direction: column; gap: 0.3rem; align-items: flex-start;
+    }
+    /* col 4: year */
+    .exh-row-year {
+      flex: 0 0 40px; text-align: right;
+      font-family: 'Space Mono', monospace; font-size: 0.68rem;
+      color: rgba(26,16,8,0.35);
+    }
+    /* col 5: actions */
+    .exh-row-actions { flex: 0 0 auto; display: flex; gap: 0.45rem; }
+
+    /* ── MODAL ──────────────────────────────────────────────────────────── */
+    #modal-overlay {
+      position: fixed; inset: 0; background: rgba(26,16,8,0.72);
+      z-index: 200; display: flex; align-items: flex-start;
+      justify-content: center; padding: 2rem 1rem;
+      overflow-y: auto;
+      opacity: 0; pointer-events: none; transition: opacity 0.2s;
+    }
+    #modal-overlay.open { opacity: 1; pointer-events: all; }
+    #modal {
+      background: var(--paper); border: var(--border);
+      box-shadow: 8px 8px 0 var(--ink);
+      width: 100%; max-width: 620px;
+      padding: 2rem; position: relative;
+      transform: translateY(-16px); transition: transform 0.2s;
+    }
+    #modal-overlay.open #modal { transform: translateY(0); }
+    .modal-title {
+      font-family: 'Bebas Neue', sans-serif; font-size: 1.8rem;
+      letter-spacing: 0.05em; margin-bottom: 1.8rem;
+      padding-bottom: 1rem; border-bottom: var(--border);
+    }
+    .modal-close {
+      position: absolute; top: 1.2rem; right: 1.2rem;
+      background: none; border: none; font-size: 1.3rem;
+      cursor: pointer; color: rgba(26,16,8,0.4); line-height: 1;
+    }
+    .modal-close:hover { color: var(--ink); }
+
+    /* ── FORMS ──────────────────────────────────────────────────────────── */
+    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .form-grid .span2 { grid-column: 1 / -1; }
+
+    .field { display: flex; flex-direction: column; gap: 0.35rem; }
+    .field label {
+      font-family: 'Space Mono', monospace; font-size: 0.6rem;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: rgba(26,16,8,0.5);
+    }
+    .field input, .field select, .field textarea {
+      font-family: 'Space Grotesk', sans-serif; font-size: 0.9rem;
+      padding: 0.6rem 0.8rem; border: var(--border);
+      background: white; color: var(--ink);
+      outline: none; transition: box-shadow 0.15s;
+      width: 100%;
+    }
+    .field input:focus, .field select:focus, .field textarea:focus {
+      box-shadow: 3px 3px 0 var(--ink);
+    }
+    .field textarea { resize: vertical; min-height: 80px; }
+    .field select { cursor: pointer; }
+    .field input[type="checkbox"] {
+      width: auto; cursor: pointer;
+    }
+
+    /* toggle */
+    .toggle-row {
+      display: flex; align-items: center; gap: 0.9rem;
+      padding: 0.6rem 0;
+    }
+    .toggle-label {
+      font-family: 'Space Mono', monospace; font-size: 0.65rem;
+      letter-spacing: 0.08em; text-transform: uppercase;
+    }
+    .toggle {
+      position: relative; width: 42px; height: 24px; flex-shrink: 0;
+    }
+    .toggle input { opacity: 0; width: 0; height: 0; position: absolute; }
+    .toggle-track {
+      position: absolute; inset: 0; background: #c8c0b0;
+      border: var(--border); cursor: pointer; transition: background 0.2s;
+    }
+    .toggle-track::after {
+      content: ''; position: absolute; top: 2px; left: 2px;
+      width: 16px; height: 16px; background: var(--ink);
+      transition: transform 0.2s;
+    }
+    .toggle input:checked ~ .toggle-track { background: var(--yellow); }
+    .toggle input:checked ~ .toggle-track::after { transform: translateX(18px); }
+
+    /* image upload */
+    .img-upload-area {
+      border: 2px dashed rgba(26,16,8,0.25); padding: 1.5rem;
+      text-align: center; cursor: pointer; transition: border-color 0.15s;
+      background: white; position: relative;
+    }
+    .img-upload-area:hover, .img-upload-area.drag-over {
+      border-color: var(--ink);
+    }
+    .img-upload-area input[type="file"] {
+      position: absolute; inset: 0; opacity: 0; cursor: pointer;
+      width: 100%; height: 100%; border: none; padding: 0;
+    }
+    .img-upload-label {
+      font-family: 'Space Mono', monospace; font-size: 0.65rem;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      color: rgba(26,16,8,0.4); pointer-events: none;
+    }
+    .img-preview {
+      max-width: 100%; max-height: 180px; object-fit: contain;
+      display: block; margin: 0 auto 0.8rem;
+    }
+    .img-clear {
+      position: absolute; top: 0.5rem; right: 0.5rem;
+      background: var(--red); color: white; border: none;
+      width: 22px; height: 22px; border-radius: 50%;
+      cursor: pointer; font-size: 0.75rem; line-height: 22px;
+      text-align: center; z-index: 2;
+    }
+
+    .form-divider {
+      border: none; border-top: var(--border);
+      margin: 1.4rem 0;
+    }
+
+    .modal-actions {
+      display: flex; gap: 0.75rem; padding-top: 1.5rem;
+      border-top: var(--border); margin-top: 1.5rem;
+      align-items: center;
+    }
+    .modal-actions .spacer { flex: 1; }
+
+    /* ── TOAST ──────────────────────────────────────────────────────────── */
+    #toast {
+      position: fixed; bottom: 2rem; right: 2rem; z-index: 300;
+      background: var(--ink); color: var(--paper);
+      padding: 0.8rem 1.4rem;
+      font-family: 'Space Mono', monospace; font-size: 0.7rem;
+      letter-spacing: 0.08em;
+      transform: translateY(80px); opacity: 0;
+      transition: transform 0.25s, opacity 0.25s;
+      pointer-events: none;
+      border-left: 4px solid var(--yellow);
+    }
+    #toast.show { transform: translateY(0); opacity: 1; }
+    #toast.error { border-left-color: var(--red); }
+
+    /* ── EMPTY STATE ────────────────────────────────────────────────────── */
+    .empty-state {
+      padding: 4rem 2rem; text-align: center;
+      color: rgba(26,16,8,0.35);
+      font-family: 'Space Mono', monospace; font-size: 0.75rem;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      border: 2px dashed rgba(26,16,8,0.15);
+    }
+
+    /* ── SPINNER ────────────────────────────────────────────────────────── */
+    .spinner {
+      display: inline-block; width: 16px; height: 16px;
+      border: 2px solid rgba(245,240,232,0.3);
+      border-top-color: var(--paper);
+      border-radius: 50%; animation: spin 0.6s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* ── NOT CONNECTED BANNER ───────────────────────────────────────────── */
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <div id="header">
+    <a href="../index.html" class="header-logo" target="_blank">Motormouth<span>.</span></a>
+    <span class="header-badge">Admin</span>
+    <div class="header-spacer"></div>
+    <a href="../index.html" class="header-viewsite" target="_blank" style="margin-right:1.2rem">View Site →</a>
+    <button onclick="openPasswordModal()" style="background:none;border:none;cursor:pointer;font-family:'Space Mono',monospace;font-size:0.6rem;letter-spacing:0.1em;text-transform:uppercase;color:rgba(245,240,232,0.35);transition:color 0.15s;padding:0" onmouseover="this.style.color='rgba(245,240,232,0.8)'" onmouseout="this.style.color='rgba(245,240,232,0.35)'">Settings</button>
+    <span style="color:rgba(245,240,232,0.15);margin:0 0.9rem">|</span>
+    <button onclick="logout()" style="background:none;border:none;cursor:pointer;font-family:'Space Mono',monospace;font-size:0.6rem;letter-spacing:0.1em;text-transform:uppercase;color:rgba(245,240,232,0.35);transition:color 0.15s;padding:0" onmouseover="this.style.color='var(--red)'" onmouseout="this.style.color='rgba(245,240,232,0.35)'">Log out</button>
+  </div>
+
+  <!-- SIDEBAR -->
+  <div id="sidebar">
+    <div class="nav-section-label">Content</div>
+    <a class="nav-item active" data-section="works" onclick="showSection('works')">
+      <span class="nav-icon">🖼</span> Works
+      <span class="nav-count" id="works-count">—</span>
+    </a>
+    <a class="nav-item" data-section="exhibitions" onclick="showSection('exhibitions')">
+      <span class="nav-icon">📅</span> Exhibitions
+      <span class="nav-count" id="exhibitions-count">—</span>
+    </a>
+  </div>
+
+  <!-- MAIN -->
+  <div id="main">
+
+    <!-- WORKS SECTION -->
+    <div class="section active" id="section-works">
+      <div class="section-header">
+        <div>
+          <div class="section-title">Works</div>
+          <div class="section-sub">Manage artworks for sale &amp; display</div>
+        </div>
+        <div class="section-header-actions">
+          <button class="btn btn-primary" onclick="openWorkModal(null)">+ Add Work</button>
+        </div>
+      </div>
+      <div class="works-grid" id="worksGrid">
+        <div class="empty-state">Loading…</div>
+      </div>
+    </div>
+
+    <!-- EXHIBITIONS SECTION -->
+    <div class="section" id="section-exhibitions">
+      <div class="section-header">
+        <div>
+          <div class="section-title">Exhibitions</div>
+          <div class="section-sub">Solo shows, group shows &amp; upcoming events</div>
+        </div>
+        <div class="section-header-actions">
+          <button class="btn btn-primary" onclick="openExhModal(null)">+ Add Exhibition</button>
+        </div>
+      </div>
+      <div class="exh-list" id="exhList">
+        <div class="empty-state">Loading…</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL -->
+  <div id="modal-overlay" onclick="if(event.target===this)closeModal()">
+    <div id="modal">
+      <button class="modal-close" onclick="closeModal()">✕</button>
+      <div class="modal-title" id="modal-title">Edit</div>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <!-- TOAST -->
+  <div id="toast"></div>
+
+  <script>
+  // ─────────────────────────────────────────────────────────────
+  // STATE
+  // ─────────────────────────────────────────────────────────────
+  let works = [];
+  let exhibitions = [];
+  let editingWorkIdx  = null;  // null = new
+  let editingExhIdx   = null;
+  let pendingImagePath = null; // path returned after upload
+  let connected = false;
+
+  // ─────────────────────────────────────────────────────────────
+  // INIT
+  // ─────────────────────────────────────────────────────────────
+  async function init() {
+    try {
+      [works, exhibitions] = await Promise.all([
+        api('works'), api('exhibitions')
+      ]);
+    } catch(e) {
+      // Session expired mid-session
+      window.location.href = '/admin/login.html';
+      return;
+    }
+    renderWorks();
+    renderExhibitions();
+    updateCounts();
+  }
+
+  // ─────────────────────────────────────────────────────────────
+  // API
+  // ─────────────────────────────────────────────────────────────
+  async function api(type, data) {
+    if (data === undefined) {
+      const r = await fetch(`/api/${type}`);
+      if (!r.ok) throw new Error(r.statusText);
+      return r.json();
+    } else {
+      const r = await fetch(`/api/${type}`, {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify(data)
+      });
+      if (!r.ok) throw new Error(r.statusText);
+      return r.json();
+    }
+  }
+
+  async function uploadImage(file) {
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.onload = async e => {
+        try {
+          const r = await fetch('/api/upload', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({filename: file.name, data: e.target.result})
+          });
+          const res = await r.json();
+          resolve(res);
+        } catch(err) { reject(err); }
+      };
+      reader.readAsDataURL(file);
+    });
+  }
+
+  // ─────────────────────────────────────────────────────────────
+  // SECTION NAV
+  // ─────────────────────────────────────────────────────────────
+  function showSection(name) {
+    document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+    document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+    document.getElementById(`section-${name}`).classList.add('active');
+    document.querySelector(`[data-section="${name}"]`).classList.add('active');
+  }
+
+  function updateCounts() {
+    document.getElementById('works-count').textContent = works.length;
+    document.getElementById('exhibitions-count').textContent = exhibitions.length;
+  }
+
+  // ─────────────────────────────────────────────────────────────
+  // WORKS RENDER
+  // ─────────────────────────────────────────────────────────────
+  const typeBg = { print: '#c8d4c0', painting: '#ddd8c4', sculpture: '#c8c0b0' };
+
+  function renderWorks() {
+    const grid = document.getElementById('worksGrid');
+    if (!works.length) {
+      grid.innerHTML = '<div class="empty-state">No works yet — add your first one.</div>';
+      return;
+    }
+    grid.innerHTML = works.map((w, i) => {
+      const imgStyle = w.image
+        ? `background-image:url('../${w.image}');`
+        : `background:${typeBg[w.type] || '#d8d3c8'};`;
+      const priceHtml = w.selling
+        ? `<div class="admin-card-price">$${Number(w.price||0).toLocaleString()}${w.edition ? ' · <span style="font-weight:400;color:rgba(26,16,8,0.5)">' + esc(w.edition) + '</span>' : ''}</div>`
+        : `<div class="admin-card-price nfs">Not for sale</div>`;
+      return `
+        <div class="admin-card">
+          <div class="admin-card-img" style="${imgStyle}" onclick="openWorkModal(${i})">
+            ${!w.image ? `<span class="placeholder-type">${esc(w.type||'')}</span>` : ''}
+          </div>
+          <div class="admin-card-body" onclick="openWorkModal(${i})">
+            <div class="admin-card-title">${esc(w.title)}</div>
+            <div class="admin-card-meta">
+              <span class="badge badge-${esc(w.type)}">${esc(w.type)}</span>
+              <span>${esc(w.year||'')}</span>
+            </div>
+            ${priceHtml}
+          </div>
+          <div class="admin-card-actions">
+            <button onclick="openWorkModal(${i})">Edit</button>
+            <button class="del" onclick="deleteWork(${i}, event)">Delete</button>
+          </div>
+        </div>`;
+    }).join('');
+  }
+
+  // ─────────────────────────────────────────────────────────────
+  // WORKS MODAL
+  // ─────────────────────────────────────────────────────────────
+  function openWorkModal(idx) {
+    editingWorkIdx  = idx;
+    pendingImagePath = null;
+    const w = idx !== null ? works[idx] : {
+      id:'', title:'', year: new Date().getFullYear()+'',
+      type:'print', selling:false, price:'', edition:'', image:null, description:''
+    };
+
+    document.getElementById('modal-title').textContent = idx !== null ? 'Edit Work' : 'Add Work';
+    document.getElementById('modal-body').innerHTML = `
+      <div class="form-grid">
+        <div class="field span2">
+          <label>Title</label>
+          <input id="f-title" type="text" value="${esc(w.title)}" placeholder="e.g. Crocodile Study I" />
+        </div>
+        <div class="field">
+          <label>Year</label>
+          <input id="f-year" type="text" value="${esc(w.year||'')}" placeholder="2025" />
+        </div>
+        <div class="field">
+          <label>Type</label>
+          <select id="f-type">
+            <option value="print"     ${w.type==='print'?'selected':''}>Print</option>
+            <option value="painting"  ${w.type==='painting'?'selected':''}>Painting</option>
+            <option value="sculpture" ${w.type==='sculpture'?'selected':''}>Sculpture</option>
+          </select>
+        </div>
+
+        <div class="span2">
+          <div class="toggle-row">
+            <label class="toggle">
+              <input type="checkbox" id="f-selling" ${w.selling?'checked':''} onchange="togglePriceField()">
+              <span class="toggle-track"></span>
+            </label>
+            <span class="toggle-label">Available for sale</span>
+          </div>
+        </div>
+
+        <div class="field" id="price-field" style="${w.selling?'':'display:none'}">
+          <label>Price (AUD)</label>
+          <input id="f-price" type="number" value="${w.price||''}" placeholder="0" />
+        </div>
+        <div class="field" id="edition-field" style="${w.selling?'':'display:none'}">
+          <label>Edition</label>
+          <input id="f-edition" type="text" value="${esc(w.edition||'')}" placeholder="e.g. Edition of 10" />
+        </div>
+
+        <hr class="form-divider span2" />
+
+        <div class="field span2">
+          <label>Image</label>
+          <div class="img-upload-area" id="upload-area"
+               ondragover="event.preventDefault();this.classList.add('drag-over')"
+               ondragleave="this.classList.remove('drag-over')"
+               ondrop="handleDrop(event)">
+            <input type="file" id="f-image" accept="image/*" onchange="handleImagePick(this)" />
+            ${w.image
+              ? `<button class="img-clear" onclick="clearImage(event)" title="Remove image">✕</button>
+                 <img class="img-preview" id="img-preview-el" src="../${esc(w.image)}" />`
+              : `<img class="img-preview" id="img-preview-el" style="display:none" />`}
+            <div class="img-upload-label" id="upload-label">${w.image ? esc(w.image.split('/').pop()) : 'Click or drag &amp; drop an image'}</div>
+          </div>
+        </div>
+
+        <div class="field span2">
+          <label>Description (optional)</label>
+          <textarea id="f-desc" placeholder="Brief note about this work…">${esc(w.description||'')}</textarea>
+        </div>
+      </div>
+
+      <div class="modal-actions">
+        ${idx !== null ? `<button class="btn btn-red btn-sm" onclick="deleteWork(${idx})">Delete Work</button>` : ''}
+        <div class="spacer"></div>
+        <button class="btn btn-sm" onclick="closeModal()">Cancel</button>
+        <button class="btn btn-primary btn-sm" id="save-btn" onclick="saveWork()">Save Work</button>
+      </div>`;
+
+    openModal();
+    // store current image for possible clearing
+    document.getElementById('upload-area')._currentImage = w.image || null;
+  }
+
+  function togglePriceField() {
+    const selling = document.getElementById('f-selling').checked;
+    document.getElementById('price-field').style.display  = selling ? '' : 'none';
+    document.getElementById('edition-field').style.display = selling ? '' : 'none';
+  }
+
+  function handleImagePick(input) {
+    if (!input.files[0]) return;
+    previewLocalImage(input.files[0]);
+    uploadImageFile(input.files[0]);
+  }
+
+  function handleDrop(e) {
+    e.preventDefault();
+    document.getElementById('upload-area').classList.remove('drag-over');
+    const file = e.dataTransfer.files[0];
+    if (file && file.type.startsWith('image/')) {
+      previewLocalImage(file);
+      uploadImageFile(file);
+    }
+  }
+
+  function previewLocalImage(file) {
+    const reader = new FileReader();
+    reader.onload = e => {
+      const img = document.getElementById('img-preview-el');
+      img.src = e.target.result;
+      img.style.display = 'block';
+      document.getElementById('upload-label').textContent = file.name;
+    };
+    reader.readAsDataURL(file);
+  }
+
+  async function uploadImageFile(file) {
+    const btn = document.getElementById('save-btn');
+    btn.innerHTML = '<span class="spinner"></span> Uploading…';
+    btn.disabled = true;
+    try {
+      const res = await uploadImage(file);
+      if (res.ok) {
+        pendingImagePath = res.path;
+        toast('Image uploaded ✓');
+      } else {
+        toast('Upload failed: ' + (res.error||'unknown'), true);
+      }
+    } catch(e) {
+      toast('Upload failed — is admin.py running?', true);
+    }
+    btn.innerHTML = 'Save Work';
+    btn.disabled = false;
+  }
+
+  function clearImage(e) {
+    e.preventDefault(); e.stopPropagation();
+    pendingImagePath = null;
+    document.getElementById('img-preview-el').style.display = 'none';
+    document.getElementById('img-preview-el').src = '';
+    document.getElementById('upload-label').textContent = 'Click or drag & drop an image';
+    document.querySelector('.img-clear')?.remove();
+    document.getElementById('upload-area')._currentImage = null;
+  }
+
+  async function saveWork() {
+    const title = document.getElementById('f-title').value.trim();
+    if (!title) { toast('Title is required', true); return; }
+
+    const area  = document.getElementById('upload-area');
+    const image = pendingImagePath !== null ? pendingImagePath
+                 : (area._currentImage || null);
+
+    const work = {
+      id:          editingWorkIdx !== null ? works[editingWorkIdx].id : slug(title),
+      title,
+      year:        document.getElementById('f-year').value.trim(),
+      type:        document.getElementById('f-type').value,
+      selling:     document.getElementById('f-selling').checked,
+      price:       parseFloat(document.getElementById('f-price').value) || null,
+      edition:     document.getElementById('f-edition').value.trim() || null,
+      image,
+      description: document.getElementById('f-desc').value.trim()
+    };
+
+    if (editingWorkIdx !== null) {
+      works[editingWorkIdx] = work;
+    } else {
+      works.push(work);
+    }
+
+    await persistWorks();
+    closeModal();
+    renderWorks();
+    updateCounts();
+  }
+
+  async function deleteWork(idx, event) {
+    if (event) { event.stopPropagation(); }
+    if (!confirm(`Delete "${works[idx].title}"? This can't be undone.`)) return;
+    works.splice(idx, 1);
+    await persistWorks();
+    closeModal();
+    renderWorks();
+    updateCounts();
+  }
+
+  async function persistWorks() {
+    try {
+      await api('works', works);
+      toast('Works saved ✓');
+    } catch(e) {
+      toast('Could not save — is admin.py running?', true);
+    }
+  }
+
+  // ─────────────────────────────────────────────────────────────
+  // EXHIBITIONS RENDER
+  // ─────────────────────────────────────────────────────────────
+  function renderExhibitions() {
+    const list = document.getElementById('exhList');
+    if (!exhibitions.length) {
+      list.innerHTML = '<div class="empty-state">No exhibitions yet.</div>';
+      return;
+    }
+    list.innerHTML = exhibitions.map((ex, i) => `
+      <div class="exh-row">
+        <div class="exh-row-info">
+          <div class="exh-row-title">${esc(ex.displayTitle||ex.title)}</div>
+          <div class="exh-row-sub">${esc(ex.venue)}${ex.city ? ', ' + esc(ex.city) : ''}${ex.page ? ' &nbsp;·&nbsp; <a href="../' + esc(ex.page) + '" target="_blank" style="color:inherit;opacity:.6">view →</a>' : ''}</div>
+        </div>
+        <div class="exh-row-dates">${esc(ex.dates)}</div>
+        <div class="exh-row-badges">
+          <span class="badge badge-${esc(ex.type)}">${esc(ex.type)}</span>
+          ${ex.upcoming ? '<span class="badge badge-upcoming">upcoming</span>' : ''}
+        </div>
+        <div class="exh-row-year">${esc(ex.year||'')}</div>
+        <div class="exh-row-actions">
+          <button class="btn btn-sm" onclick="openExhModal(${i})">Edit</button>
+          <button class="btn btn-sm btn-red" onclick="deleteExh(${i})">Del</button>
+        </div>
+      </div>`).join('');
+  }
+
+  // ─────────────────────────────────────────────────────────────
+  // EXHIBITIONS MODAL
+  // ─────────────────────────────────────────────────────────────
+  function openExhModal(idx) {
+    editingExhIdx = idx;
+    const ex = idx !== null ? exhibitions[idx] : {
+      id:'', title:'', displayTitle:'', year: new Date().getFullYear()+'',
+      dates:'', venue:'', city:'', type:'solo', upcoming:false, page:''
+    };
+
+    document.getElementById('modal-title').textContent = idx !== null ? 'Edit Exhibition' : 'Add Exhibition';
+    document.getElementById('modal-body').innerHTML = `
+      <div class="form-grid">
+        <div class="field span2">
+          <label>Title</label>
+          <input id="ex-title" type="text" value="${esc(ex.title)}" placeholder="e.g. The Crocodile" />
+        </div>
+        <div class="field span2">
+          <label>Display Title <span style="opacity:.5">(with punctuation, e.g. 'The Crocodile')</span></label>
+          <input id="ex-displayTitle" type="text" value="${esc(ex.displayTitle||ex.title)}" placeholder="'The Crocodile'" />
+        </div>
+        <div class="field">
+          <label>Year</label>
+          <input id="ex-year" type="text" value="${esc(ex.year||'')}" placeholder="2025" />
+        </div>
+        <div class="field">
+          <label>Type</label>
+          <select id="ex-type">
+            <option value="solo"  ${ex.type==='solo'?'selected':''}>Solo Show</option>
+            <option value="group" ${ex.type==='group'?'selected':''}>Group Show</option>
+          </select>
+        </div>
+        <div class="field span2">
+          <label>Dates</label>
+          <input id="ex-dates" type="text" value="${esc(ex.dates)}" placeholder="e.g. 9 July – 2 August 2025" />
+        </div>
+        <div class="field">
+          <label>Venue</label>
+          <input id="ex-venue" type="text" value="${esc(ex.venue)}" placeholder="Gallery name" />
+        </div>
+        <div class="field">
+          <label>City</label>
+          <input id="ex-city" type="text" value="${esc(ex.city||'')}" placeholder="Sydney, NSW" />
+        </div>
+
+        <div class="span2">
+          <div class="toggle-row">
+            <label class="toggle">
+              <input type="checkbox" id="ex-upcoming" ${ex.upcoming?'checked':''}>
+              <span class="toggle-track"></span>
+            </label>
+            <span class="toggle-label">Upcoming / current show</span>
+          </div>
+        </div>
+
+        <div class="field span2">
+          <label>Exhibition page filename <span style="opacity:.5">(optional, e.g. exhibition-crocodile.html)</span></label>
+          <input id="ex-page" type="text" value="${esc(ex.page||'')}" placeholder="exhibition-my-show.html" />
+        </div>
+      </div>
+
+      <div class="modal-actions">
+        ${idx !== null ? `<button class="btn btn-red btn-sm" onclick="deleteExh(${idx})">Delete</button>` : ''}
+        <div class="spacer"></div>
+        <button class="btn btn-sm" onclick="closeModal()">Cancel</button>
+        <button class="btn btn-primary btn-sm" onclick="saveExh()">Save Exhibition</button>
+      </div>`;
+
+    openModal();
+  }
+
+  async function saveExh() {
+    const title = document.getElementById('ex-title').value.trim();
+    if (!title) { toast('Title is required', true); return; }
+
+    const ex = {
+      id:           editingExhIdx !== null ? exhibitions[editingExhIdx].id : slug(title),
+      title,
+      displayTitle: document.getElementById('ex-displayTitle').value.trim() || title,
+      year:         document.getElementById('ex-year').value.trim(),
+      dates:        document.getElementById('ex-dates').value.trim(),
+      venue:        document.getElementById('ex-venue').value.trim(),
+      city:         document.getElementById('ex-city').value.trim(),
+      type:         document.getElementById('ex-type').value,
+      upcoming:     document.getElementById('ex-upcoming').checked,
+      page:         document.getElementById('ex-page').value.trim() || null
+    };
+
+    if (editingExhIdx !== null) {
+      exhibitions[editingExhIdx] = ex;
+    } else {
+      exhibitions.push(ex);
+    }
+
+    await persistExhibitions();
+    closeModal();
+    renderExhibitions();
+    updateCounts();
+  }
+
+  async function deleteExh(idx, event) {
+    if (event) event.stopPropagation();
+    if (!confirm(`Delete "${exhibitions[idx].title}"?`)) return;
+    exhibitions.splice(idx, 1);
+    await persistExhibitions();
+    closeModal();
+    renderExhibitions();
+    updateCounts();
+  }
+
+  async function persistExhibitions() {
+    try {
+      await api('exhibitions', exhibitions);
+      toast('Exhibitions saved ✓');
+    } catch(e) {
+      toast('Could not save — is admin.py running?', true);
+    }
+  }
+
+  // ─────────────────────────────────────────────────────────────
+  // MODAL
+  // ─────────────────────────────────────────────────────────────
+  function openModal() {
+    document.getElementById('modal-overlay').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeModal() {
+    document.getElementById('modal-overlay').classList.remove('open');
+    document.body.style.overflow = '';
+    pendingImagePath = null;
+  }
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+  // ─────────────────────────────────────────────────────────────
+  // TOAST
+  // ─────────────────────────────────────────────────────────────
+  let toastTimer;
+  function toast(msg, isError = false) {
+    const el = document.getElementById('toast');
+    el.textContent = msg;
+    el.className = 'show' + (isError ? ' error' : '');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => el.className = '', 3000);
+  }
+
+  // ─────────────────────────────────────────────────────────────
+  // UTILS
+  // ─────────────────────────────────────────────────────────────
+  function esc(s) {
+    return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  }
+  function slug(s) {
+    return s.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
+  }
+
+  // ─────────────────────────────────────────────────────────────
+  // AUTH
+  // ─────────────────────────────────────────────────────────────
+  async function logout() {
+    await fetch('/api/logout', { method: 'POST' });
+    window.location.href = '/admin/login.html';
+  }
+
+  function openPasswordModal() {
+    document.getElementById('modal-title').textContent = 'Change Password';
+    document.getElementById('modal-body').innerHTML = `
+      <div class="form-grid">
+        <div class="field span2">
+          <label>Username</label>
+          <input id="pw-username" type="text" autocapitalize="none" spellcheck="false" placeholder="Username" />
+        </div>
+        <div class="field span2">
+          <label>Current Password</label>
+          <input id="pw-current" type="password" autocomplete="current-password" />
+        </div>
+        <div class="field">
+          <label>New Password</label>
+          <input id="pw-new" type="password" autocomplete="new-password" />
+        </div>
+        <div class="field">
+          <label>Confirm New Password</label>
+          <input id="pw-confirm" type="password" autocomplete="new-password" />
+        </div>
+      </div>
+      <div class="modal-actions">
+        <div class="spacer"></div>
+        <button class="btn btn-sm" onclick="closeModal()">Cancel</button>
+        <button class="btn btn-primary btn-sm" onclick="savePassword()">Save Changes</button>
+      </div>`;
+
+    // Pre-fill username from page (fetched on init isn't stored, so leave blank or fetch)
+    fetch('/api/works').then(() => {}).catch(() => {});
+    openModal();
+    // focus username
+    setTimeout(() => document.getElementById('pw-username').focus(), 100);
+  }
+
+  async function savePassword() {
+    const username = document.getElementById('pw-username').value.trim();
+    const current  = document.getElementById('pw-current').value;
+    const newPw    = document.getElementById('pw-new').value;
+    const confirm  = document.getElementById('pw-confirm').value;
+
+    if (!current) { toast('Current password is required', true); return; }
+    if (!newPw)   { toast('New password is required', true); return; }
+    if (newPw !== confirm) { toast('New passwords do not match', true); return; }
+    if (newPw.length < 4)  { toast('Password must be at least 4 characters', true); return; }
+
+    try {
+      const res  = await fetch('/api/change-password', {
+        method:  'POST',
+        headers: {'Content-Type': 'application/json'},
+        body:    JSON.stringify({ username: username || undefined, current, new: newPw })
+      });
+      const data = await res.json();
+      if (data.ok) {
+        closeModal();
+        toast('Password updated ✓');
+      } else {
+        toast(data.error || 'Could not update password', true);
+      }
+    } catch(_) {
+      toast('Server error', true);
+    }
+  }
+
+  // ─────────────────────────────────────────────────────────────
+  // BOOT
+  // ─────────────────────────────────────────────────────────────
+  init();
+  </script>
+</body>
+</html>

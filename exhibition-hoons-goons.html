@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>'Hoons & Goons' — Motormouth</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@300;400;500;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav id="nav">
+    <a href="index.html" class="nav-logo">Motormouth<span>.</span></a>
+    <button class="nav-burger" id="burgerBtn" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="works.html">Works</a></li>
+      <li><a href="exhibitions.html" class="active">Exhibitions</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="exh-hero">
+    <div class="exh-hero-bg" style="background: radial-gradient(ellipse at 60% 50%, #8b3a1a 0%, transparent 65%);"></div>
+    <div class="exh-hero-inner">
+      <div style="margin-bottom:1.2rem"><a href="exhibitions.html" style="font-family:'Space Mono',monospace;font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(245,240,232,0.4);text-decoration:none;">← All Exhibitions</a></div>
+      <div class="exh-hero-meta">
+        <span>Solo Show</span>
+        <span>Good Grief Studios, Hobart</span>
+        <span>20 January – 12 February 2023</span>
+      </div>
+      <h1 class="exh-hero-title">'Hoons<br>&amp; Goons'</h1>
+      <p class="exh-hero-tagline">Speed, swagger, and suburban mythology — a love letter to the larrikin in all its forms, rendered in ink and tyre marks.</p>
+    </div>
+  </div>
+
+  <div class="exh-detail-body">
+    <div class="container">
+      <div class="exh-detail-grid">
+        <div class="exh-detail-sidebar reveal">
+          <div class="exh-detail-label">Venue</div>
+          <div class="exh-detail-value">Good Grief Studios<br>Hobart, TAS</div>
+          <div class="exh-detail-label">Dates</div>
+          <div class="exh-detail-value">20 January – 12 February 2023</div>
+          <div class="exh-detail-label">Type</div>
+          <div class="exh-detail-value">Solo Exhibition</div>
+        </div>
+        <div class="exh-detail-text reveal">
+          <p><em>The Worst Bunch of Girls You Ever Met</em></p>
+          <p>The characters present within the Hoons &amp; Goons series are the social circle that is formed through the shared experience of evenings in the pub or parking at the 7/11 to show off your car. There is an inescapable love and hate that is created when you can't stop running into someone you know. These lot are the last standing goons left behind on a Thursday night when everyone else has gone home for the night, kicked out of one pub and on their way to another with longer opening hours. Whether or not they'll be let in has not begun to cross their minds, but it's crossing ours.</p>
+          <p>Special Thanks to: Thomas Friend and Jacob for organisation, installation, and Hobart recommendations, and also to Richard Langley for clearing up with me that we do not share a long-lost father. Thank you to Lucinda Langley for support, bankrolling, and all the laughs.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- PHOTOS -->
+  <div class="photo-section">
+    <div class="container">
+      <span class="tag">From the Exhibition</span>
+      <div class="photo-grid">
+
+        <div class="photo-item reveal" data-title="Nightrider" data-year="2023" onclick="openPhoto(this)">
+          <img src="https://motormouthcomics.com/wp-content/uploads/2021/11/lily-langley-nightrider.jpeg" alt="Nightrider" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+          <div class="photo-caption">
+            <div class="photo-caption-title">Nightrider</div>
+          </div>
+        </div>
+        <div class="photo-item reveal" data-title="Fat Arming It" data-year="2023" onclick="openPhoto(this)">
+          <img src="https://motormouthcomics.com/wp-content/uploads/2021/11/lily-langley-hoons-goons-fat-arming-it.jpeg" alt="Fat Arming It" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+          <div class="photo-caption">
+            <div class="photo-caption-title">Fat Arming It</div>
+          </div>
+        </div>
+        <div class="photo-item reveal" data-title="A Mess of Everything Dipshit Thing You've Ever Said, Fucked or Thought" data-year="2023" onclick="openPhoto(this)">
+          <img src="https://motormouthcomics.com/wp-content/uploads/2021/11/lily-langley-a-mess-of-everything-dipshit-thing-youve-ever-said-fucked-or-thought.jpeg" alt="A Mess of Everything Dipshit Thing You've Ever Said, Fucked or Thought" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+          <div class="photo-caption">
+            <div class="photo-caption-title">A Mess of Everything Dipshit Thing You've Ever Said, Fucked or Thought</div>
+          </div>
+        </div>
+        <div class="photo-item reveal" data-title="You Want Some? I'll Give It Ya" data-year="2023" onclick="openPhoto(this)">
+          <img src="https://motormouthcomics.com/wp-content/uploads/2021/11/lily-langley-hoons-goons-you-want-some-ill-give-it-ya.jpeg" alt="You Want Some? I'll Give It Ya" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+          <div class="photo-caption">
+            <div class="photo-caption-title">You Want Some? I'll Give It Ya</div>
+          </div>
+        </div>
+        <div class="photo-item reveal" data-title="Exhibition photo" data-year="2023" onclick="openPhoto(this)">
+          <img src="https://motormouthcomics.com/wp-content/uploads/2021/11/img_4579.jpeg" alt="Exhibition photo" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+        </div>
+        <div class="photo-item reveal" data-title="Exhibition photo" data-year="2023" onclick="openPhoto(this)">
+          <img src="https://motormouthcomics.com/wp-content/uploads/2021/11/img_4539.jpeg" alt="Exhibition photo" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+        </div>
+        <div class="photo-item reveal" data-title="Exhibition photo" data-year="2023" onclick="openPhoto(this)">
+          <img src="https://motormouthcomics.com/wp-content/uploads/2021/11/img_4528.jpeg" alt="Exhibition photo" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+        </div>
+        <div class="photo-item reveal" data-title="Exhibition photo" data-year="2023" onclick="openPhoto(this)">
+          <img src="https://motormouthcomics.com/wp-content/uploads/2021/11/img_4534.jpeg" alt="Exhibition photo" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+        </div>
+        <div class="photo-item reveal" data-title="Exhibition photo" data-year="2023" onclick="openPhoto(this)">
+          <img src="https://motormouthcomics.com/wp-content/uploads/2024/04/img_9378.jpg" alt="Exhibition photo" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+        </div>
+        <div class="photo-item reveal" data-title="Love, Blood and Beer" data-year="2023" onclick="openPhoto(this)">
+          <img src="https://motormouthcomics.com/wp-content/uploads/2022/02/love-blood-and-beer.jpg" alt="Love, Blood and Beer" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+          <div class="photo-caption">
+            <div class="photo-caption-title">Love, Blood and Beer</div>
+          </div>
+        </div>
+        <div class="photo-item reveal" data-title="Public Transport Pieta" data-year="2023" onclick="openPhoto(this)">
+          <img src="https://motormouthcomics.com/wp-content/uploads/2021/11/lily-langley-hoons-goons-public-transport-pieta.jpeg" alt="Public Transport Pieta" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+          <div class="photo-caption">
+            <div class="photo-caption-title">Public Transport Pieta</div>
+          </div>
+        </div>
+        <div class="photo-item reveal" data-title="Exhibition photo" data-year="2023" onclick="openPhoto(this)">
+          <img src="https://motormouthcomics.com/wp-content/uploads/2021/11/img_4544.jpeg" alt="Exhibition photo" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+        </div>
+        <div class="photo-item reveal" data-title="Bar Hug from Bar Flies" data-year="2023" onclick="openPhoto(this)">
+          <img src="https://motormouthcomics.com/wp-content/uploads/2021/11/bar-hug-from-bar-flies.jpg" alt="Bar Hug from Bar Flies" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+          <div class="photo-caption">
+            <div class="photo-caption-title">Bar Hug from Bar Flies</div>
+          </div>
+        </div>
+        <div class="photo-item reveal" data-title="Exhibition photo" data-year="2023" onclick="openPhoto(this)">
+          <img src="https://motormouthcomics.com/wp-content/uploads/2021/11/img_4527.jpeg" alt="Exhibition photo" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+        </div>
+        <div class="photo-item reveal" data-title="Exhibition photo" data-year="2023" onclick="openPhoto(this)">
+          <img src="https://motormouthcomics.com/wp-content/uploads/2021/11/img_4535.jpeg" alt="Exhibition photo" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+        </div>
+        <div class="photo-item reveal" data-title="Exhibition photo" data-year="2023" onclick="openPhoto(this)">
+          <img src="https://motormouthcomics.com/wp-content/uploads/2021/11/img_5186-copy.jpg" alt="Exhibition photo" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+        </div>
+        <div class="photo-item reveal" data-title="Exhibition photo" data-year="2023" onclick="openPhoto(this)">
+          <img src="https://motormouthcomics.com/wp-content/uploads/2021/11/img_4546.jpeg" alt="Exhibition photo" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+        </div>
+        <div class="photo-item reveal" data-title="Exhibition photo" data-year="2023" onclick="openPhoto(this)">
+          <img src="https://motormouthcomics.com/wp-content/uploads/2021/11/img_4530.jpeg" alt="Exhibition photo" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+        </div>
+        <div class="photo-item reveal" data-title="Central Park Picnic" data-year="2023" onclick="openPhoto(this)">
+          <img src="https://motormouthcomics.com/wp-content/uploads/2022/02/central-park-picnic.jpg" alt="Central Park Picnic" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+          <div class="photo-caption">
+            <div class="photo-caption-title">Central Park Picnic</div>
+          </div>
+        </div>
+        <div class="photo-item reveal" data-title="Exhibition photo" data-year="2023" onclick="openPhoto(this)">
+          <img src="https://motormouthcomics.com/wp-content/uploads/2024/04/image1-1.jpeg" alt="Exhibition photo" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+        </div>
+        <div class="photo-item reveal" data-title="Hoons &amp; Goons — Exhibition Poster" data-year="2023" onclick="openPhoto(this)">
+          <img src="https://motormouthcomics.com/wp-content/uploads/2021/11/hoons-and-goons-wall-post-instagram.jpg" alt="Hoons &amp; Goons — Exhibition Poster" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+          <div class="photo-caption">
+            <div class="photo-caption-title">Hoons &amp; Goons — Exhibition Poster</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="exh-nav-strip">
+    <a href="exhibition-death-in-suburbia.html" class="exh-nav-link">
+      <span class="exh-nav-dir">← Previous Show</span>
+      <span class="exh-nav-name">'Death in Suburbia'</span>
+    </a>
+    <a href="exhibition-miscreants.html" class="exh-nav-link" style="text-align:right">
+      <span class="exh-nav-dir">Next Show →</span>
+      <span class="exh-nav-name">'Miscreants'</span>
+    </a>
+  </div>
+
+  <footer>
+    <a href="index.html" class="footer-logo">Motormouth<span>.</span></a>
+    <div class="footer-copy">© 2025 Motormouth / Lily Langley — All rights reserved</div>
+  </footer>
+
+  <div id="photo-lightbox" onclick="if(event.target===this)closePhoto()">
+    <div class="photo-lightbox-inner">
+      <button class="photo-lightbox-close" onclick="closePhoto()">✕</button>
+      <div id="plbContent"></div>
+      <div class="photo-lightbox-caption"><strong id="plbTitle"></strong><span id="plbYear"></span></div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('burgerBtn').addEventListener('click', () => document.getElementById('navLinks').classList.toggle('open'));
+    const io = new IntersectionObserver(entries => entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } }), { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+    function openPhoto(el) {
+      const img = el.querySelector('img');
+      const svg = el.querySelector('svg');
+      document.getElementById('plbContent').innerHTML = img
+        ? `<img src="${img.src}" alt="${img.alt}" style="max-width:100%;max-height:80vh;object-fit:contain;display:block;margin:auto;">`
+        : svg.outerHTML;
+      document.getElementById('plbTitle').textContent = el.dataset.title;
+      document.getElementById('plbYear').textContent = el.dataset.year;
+      document.getElementById('photo-lightbox').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closePhoto() {
+      document.getElementById('photo-lightbox').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closePhoto(); });
+  </script>
+</body>
+</html>

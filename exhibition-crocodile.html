@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>'The Crocodile' — Motormouth</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@300;400;500;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav id="nav">
+    <a href="index.html" class="nav-logo">Motormouth<span>.</span></a>
+    <button class="nav-burger" id="burgerBtn" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="works.html">Works</a></li>
+      <li><a href="exhibitions.html" class="active">Exhibitions</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <div class="exh-hero">
+    <div class="exh-hero-bg" style="background: radial-gradient(ellipse at 70% 60%, #2a4a3a 0%, transparent 70%);"></div>
+    <div class="exh-hero-inner">
+      <div style="margin-bottom:1.2rem"><span class="tag yellow">Upcoming</span>&nbsp;<a href="exhibitions.html" style="font-family:'Space Mono',monospace;font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(245,240,232,0.4);text-decoration:none;">← All Exhibitions</a></div>
+      <div class="exh-hero-meta">
+        <span>Solo Show</span>
+        <span>Sugarglider Gallery, Sydney</span>
+        <span>9 July – 2 August 2025</span>
+      </div>
+      <h1 class="exh-hero-title">'The<br>Crocodile'</h1>
+      <p class="exh-hero-tagline">The crocodile as ancient survivor, patient witness, cunning trickster — a new body of work circling a single, enduring creature.</p>
+    </div>
+  </div>
+
+  <!-- DETAIL -->
+  <div class="exh-detail-body">
+    <div class="container">
+      <div class="exh-detail-grid">
+        <div class="exh-detail-sidebar reveal">
+          <div class="exh-detail-label">Venue</div>
+          <div class="exh-detail-value">Sugarglider Gallery<br>Sydney, NSW</div>
+          <div class="exh-detail-label">Dates</div>
+          <div class="exh-detail-value">9 July – 2 August 2025</div>
+          <div class="exh-detail-label">Type</div>
+          <div class="exh-detail-value">Solo Exhibition</div>
+          <div style="margin-top:2rem">
+            <a href="index.html#contact" class="btn btn-primary" style="display:block;text-align:center;">Enquire</a>
+          </div>
+        </div>
+        <div class="exh-detail-text reveal">
+          <p>The crocodile is always there. Sometimes you see him, sometimes he sinks beneath the surface, but be assured he is watching. —</p>
+          <p>The Crocodile is many things.<br>You have your own Crocodile; just over there, lying in wait.<br>Even if you can't admit it to yourself, even if you close your eyes.</p>
+          <p>Meditating on and agonising over the persistence of chronic illness, generational curses, the rigidity of femininity, and substance abuse, Motormouth Comics presents a collection of terrible beasts and beloved airheads.</p>
+          <p>Special Thanks to: Fiona Macpherson, Vandida ARI and Sneaky Possum for organising and hosting. Thank you Nice China and Lonely Skeleton for opening night performances and Gusher and Problem Green for closing night performances.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PHOTOS -->
+  <div class="photo-section">
+    <div class="container">
+      <span class="tag">From the Exhibition</span>
+      <div class="photo-grid">
+
+        <div class="photo-item reveal" data-title="Goodnight Darling, 2025. Ink and chalk pastel on paper, A4" data-year="2025" onclick="openPhoto(this)">
+          <img src="https://motormouthcomics.com/wp-content/uploads/2025/10/img_7771.jpg" alt="Goodnight Darling, 2025. Ink and chalk pastel on paper, A4" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+          <div class="photo-caption">
+            <div class="photo-caption-title">Goodnight Darling, 2025. Ink and chalk pastel on paper, A4</div>
+          </div>
+        </div>
+        <div class="photo-item reveal" data-title="Lousy T-Shirt, 2025. Ink on paper, A4" data-year="2025" onclick="openPhoto(this)">
+          <img src="https://motormouthcomics.com/wp-content/uploads/2025/10/01aeebed-e7c7-4461-bd23-eb4d1ef1648a.jpg" alt="Lousy T-Shirt, 2025. Ink on paper, A4" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+          <div class="photo-caption">
+            <div class="photo-caption-title">Lousy T-Shirt, 2025. Ink on paper, A4</div>
+          </div>
+        </div>
+        <div class="photo-item reveal" data-title="Love, 2025 (detail)" data-year="2025" onclick="openPhoto(this)">
+          <img src="https://motormouthcomics.com/wp-content/uploads/2025/10/img_7959.jpg" alt="Love, 2025 (detail)" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+          <div class="photo-caption">
+            <div class="photo-caption-title">Love, 2025 (detail)</div>
+          </div>
+        </div>
+        <div class="photo-item reveal" data-title="Mirror, 2025 and Mask, 2025" data-year="2025" onclick="openPhoto(this)">
+          <img src="https://motormouthcomics.com/wp-content/uploads/2025/10/mirror-and-mask.jpg" alt="Mirror, 2025 and Mask, 2025" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+          <div class="photo-caption">
+            <div class="photo-caption-title">Mirror, 2025 and Mask, 2025</div>
+          </div>
+        </div>
+        <div class="photo-item reveal" data-title="(Fuck Off Morrissey, but) I Too Would Rather Not Go Back to the Old House, 2024. Ink on paper, 56 x 76 cm" data-year="2025" onclick="openPhoto(this)">
+          <img src="https://motormouthcomics.com/wp-content/uploads/2025/10/img_7766.jpg" alt="(Fuck Off Morrissey, but) I Too Would Rather Not Go Back to the Old House, 2024. Ink on paper, 56 x 76 cm" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+          <div class="photo-caption">
+            <div class="photo-caption-title">(Fuck Off Morrissey, but) I Too Would Rather Not Go Back to the Old House, 2024. Ink on paper, 56 x 76 cm</div>
+          </div>
+        </div>
+        <div class="photo-item reveal" data-title="(Fuck Off Morrissey, but) I Too Would Rather Not Go Back to the Old House, 2024 (detail)" data-year="2025" onclick="openPhoto(this)">
+          <img src="https://motormouthcomics.com/wp-content/uploads/2025/10/img_4434.jpg" alt="(Fuck Off Morrissey, but) I Too Would Rather Not Go Back to the Old House, 2024 (detail)" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+          <div class="photo-caption">
+            <div class="photo-caption-title">(Fuck Off Morrissey, but) I Too Would Rather Not Go Back to the Old House, 2024 (detail)</div>
+          </div>
+        </div>
+        <div class="photo-item reveal" data-title="Dinner Guest, 2022. Gouache and ink on paper." data-year="2025" onclick="openPhoto(this)">
+          <img src="https://motormouthcomics.com/wp-content/uploads/2025/10/img_7775.jpg" alt="Dinner Guest, 2022. Gouache and ink on paper." loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+          <div class="photo-caption">
+            <div class="photo-caption-title">Dinner Guest, 2022. Gouache and ink on paper.</div>
+          </div>
+        </div>
+        <div class="photo-item reveal" data-title="Heel, 2025" data-year="2025" onclick="openPhoto(this)">
+          <img src="https://motormouthcomics.com/wp-content/uploads/2025/10/a3fb6a9a-5983-4688-ad94-0f99999324b31.jpg" alt="Heel, 2025" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+          <div class="photo-caption">
+            <div class="photo-caption-title">Heel, 2025</div>
+          </div>
+        </div>
+        <div class="photo-item reveal" data-title="Love, 2025" data-year="2025" onclick="openPhoto(this)">
+          <img src="https://motormouthcomics.com/wp-content/uploads/2025/10/img_7769.jpg" alt="Love, 2025" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+          <div class="photo-caption">
+            <div class="photo-caption-title">Love, 2025</div>
+          </div>
+        </div>
+        <div class="photo-item reveal" data-title="Devil Wilson, 2023" data-year="2025" onclick="openPhoto(this)">
+          <img src="https://motormouthcomics.com/wp-content/uploads/2025/10/img_7773.jpg" alt="Devil Wilson, 2023" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+          <div class="photo-caption">
+            <div class="photo-caption-title">Devil Wilson, 2023</div>
+          </div>
+        </div>
+        <div class="photo-item reveal" data-title="Stanley Boy, 2022" data-year="2025" onclick="openPhoto(this)">
+          <img src="https://motormouthcomics.com/wp-content/uploads/2025/10/img_7774.jpg" alt="Stanley Boy, 2022" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+          <div class="photo-caption">
+            <div class="photo-caption-title">Stanley Boy, 2022</div>
+          </div>
+        </div>
+        <div class="photo-item reveal" data-title="Exhibition photo" data-year="2025" onclick="openPhoto(this)">
+          <img src="https://motormouthcomics.com/wp-content/uploads/2025/10/img_7767.jpg" alt="Exhibition photo" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+        </div>
+        <div class="photo-item reveal" data-title="Exhibition photo" data-year="2025" onclick="openPhoto(this)">
+          <img src="https://motormouthcomics.com/wp-content/uploads/2025/10/img_7768.jpg" alt="Exhibition photo" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+        </div>
+        <div class="photo-item reveal" data-title="Arrival, 2025 (Detail). Coloured pencil on paper, 56 x 76 cm (framed)" data-year="2025" onclick="openPhoto(this)">
+          <img src="https://motormouthcomics.com/wp-content/uploads/2025/10/img_8409.jpg" alt="Arrival, 2025 (Detail). Coloured pencil on paper, 56 x 76 cm (framed)" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+          <div class="photo-caption">
+            <div class="photo-caption-title">Arrival, 2025 (Detail). Coloured pencil on paper, 56 x 76 cm (framed)</div>
+          </div>
+        </div>
+        <div class="photo-item reveal" data-title="Heel, 2025. Ink on paper" data-year="2025" onclick="openPhoto(this)">
+          <img src="https://motormouthcomics.com/wp-content/uploads/2025/10/img_7956.jpg" alt="Heel, 2025. Ink on paper" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+          <div class="photo-caption">
+            <div class="photo-caption-title">Heel, 2025. Ink on paper</div>
+          </div>
+        </div>
+        <div class="photo-item reveal" data-title="Devil Wilson, taken opening night by Narika Mckenzie on her film camera" data-year="2025" onclick="openPhoto(this)">
+          <img src="https://motormouthcomics.com/wp-content/uploads/2025/10/8a5c8bbc-12ef-459e-bcb0-37e791af9fee.jpg" alt="Devil Wilson, taken opening night by Narika Mckenzie on her film camera" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+          <div class="photo-caption">
+            <div class="photo-caption-title">Devil Wilson, taken opening night by Narika Mckenzie on her film camera</div>
+          </div>
+        </div>
+        <div class="photo-item reveal" data-title="Feral opening night taken by Narika Mckenzie on her film camera" data-year="2025" onclick="openPhoto(this)">
+          <img src="https://motormouthcomics.com/wp-content/uploads/2025/10/86588476-b2db-43e0-ae2a-4031659518b3.jpg" alt="Feral opening night taken by Narika Mckenzie on her film camera" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+          <div class="photo-caption">
+            <div class="photo-caption-title">Feral opening night taken by Narika Mckenzie on her film camera</div>
+          </div>
+        </div>
+        <div class="photo-item reveal" data-title="Artist opening night, 1 hour post breakup but looking fierce in a faux fur hoodie. Taken by Narika Mckenzie on her film camera" data-year="2025" onclick="openPhoto(this)">
+          <img src="https://motormouthcomics.com/wp-content/uploads/2025/10/70cc27b6-b9ee-4b12-a166-bc213d60801b.jpg" alt="Artist opening night, 1 hour post breakup but looking fierce in a faux fur hoodie. Taken by Narika Mckenzie on her film camera" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+          <div class="photo-caption">
+            <div class="photo-caption-title">Artist opening night, 1 hour post breakup but looking fierce in a faux fur hoodie. Taken by Narika Mckenzie on her film camera</div>
+          </div>
+        </div>
+        <div class="photo-item reveal" data-title="The Crocodile — Exhibition Poster" data-year="2025" onclick="openPhoto(this)">
+          <img src="https://motormouthcomics.com/wp-content/uploads/2025/10/img_7760.png" alt="The Crocodile — Exhibition Poster" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+          <div class="photo-caption">
+            <div class="photo-caption-title">The Crocodile — Exhibition Poster</div>
+          </div>
+        </div>
+        <div class="photo-item reveal" data-title="The Crocodile — Promotional Banner" data-year="2025" onclick="openPhoto(this)">
+          <img src="https://motormouthcomics.com/wp-content/uploads/2025/10/fb-banner-the-crocodile.jpg" alt="The Crocodile — Promotional Banner" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+          <div class="photo-caption">
+            <div class="photo-caption-title">The Crocodile — Promotional Banner</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- EXHIBITION NAV -->
+  <div class="exh-nav-strip">
+    <a href="exhibitions.html" class="exh-nav-link">
+      <span class="exh-nav-dir">← All Exhibitions</span>
+      <span class="exh-nav-name">Back to CV</span>
+    </a>
+    <a href="exhibition-miscreants.html" class="exh-nav-link" style="text-align:right">
+      <span class="exh-nav-dir">Previous Show →</span>
+      <span class="exh-nav-name">'Miscreants'</span>
+    </a>
+  </div>
+
+  <footer>
+    <a href="index.html" class="footer-logo">Motormouth<span>.</span></a>
+    <div class="footer-copy">© 2025 Motormouth / Lily Langley — All rights reserved</div>
+  </footer>
+
+  <div id="photo-lightbox" onclick="if(event.target===this)closePhoto()">
+    <div class="photo-lightbox-inner">
+      <button class="photo-lightbox-close" onclick="closePhoto()">✕</button>
+      <div id="plbContent"></div>
+      <div class="photo-lightbox-caption"><strong id="plbTitle"></strong><span id="plbYear"></span></div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('burgerBtn').addEventListener('click', () => document.getElementById('navLinks').classList.toggle('open'));
+    const io = new IntersectionObserver(entries => entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } }), { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+    function openPhoto(el) {
+      const img = el.querySelector('img');
+      const svg = el.querySelector('svg');
+      document.getElementById('plbContent').innerHTML = img
+        ? `<img src="${img.src}" alt="${img.alt}" style="max-width:100%;max-height:80vh;object-fit:contain;display:block;margin:auto;">`
+        : svg.outerHTML;
+      document.getElementById('plbTitle').textContent = el.dataset.title;
+      document.getElementById('plbYear').textContent = el.dataset.year;
+      document.getElementById('photo-lightbox').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closePhoto() {
+      document.getElementById('photo-lightbox').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closePhoto(); });
+  </script>
+</body>
+</html>
