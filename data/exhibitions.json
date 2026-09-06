@@ -20,7 +20,7 @@
     "venue": "Sugarglider Gallery",
     "city": "Sydney, NSW",
     "type": "solo",
-    "upcoming": true,
+    "upcoming": false,
     "page": "exhibition-crocodile.html"
   },
   {
