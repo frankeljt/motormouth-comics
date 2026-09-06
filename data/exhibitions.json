@@ -21,7 +21,8 @@
     "city": "Sydney, NSW",
     "type": "solo",
     "upcoming": false,
-    "page": "exhibition-crocodile.html"
+    "page": "exhibition-crocodile.html",
+    "description": "The crocodile as ancient survivor, patient witness, cunning trickster — a new body of work circling a single, enduring creature.\n\nThe crocodile is always there. Sometimes you see him, sometimes he sinks beneath the surface, but be assured he is watching. —\n\nThe Crocodile is many things. You have your own Crocodile; just over there, lying in wait. Even if you can't admit it to yourself, even if you close your eyes.\n\nMeditating on and agonising over the persistence of chronic illness, generational curses, the rigidity of femininity, and substance abuse, Motormouth Comics presents a collection of terrible beasts and beloved airheads.\n\nSpecial Thanks to: Fiona Macpherson, Vandida ARI and Sneaky Possum for organising and hosting. Thank you Nice China and Lonely Skeleton for opening night performances and Gusher and Problem Green for closing night performances."
   },
   {
     "id": "miscreants",
@@ -33,7 +34,8 @@
     "city": "Sydney, NSW",
     "type": "solo",
     "upcoming": false,
-    "page": "exhibition-miscreants.html"
+    "page": "exhibition-miscreants.html",
+    "description": "A rogue's gallery of larrikins, troublemakers, and tenderly rendered portraits of defiance — characters who exist just outside the rules.\n\n/ˈmɪskriənt/ (noun): a person who has done something wrong or unlawful. A person behaving badly.\n\nWe are eels on the grass in the hot hot sun, slithering desperately for the lake, finding only dwindling pools. Our bodies tire, our once-soft skin blisters and bursts as gills choke on air. Do not despair; this is from no moral failing. You cannot find the lake because it was taken from you. Bit by bit it was drained, poisoned, filled in for a carpark, petrol station, new subdivision. The next puddle isn't far now, let's go there together. If we make it I'll buy you a drink.\n\nSpecial thanks to: Prop Gallery, Grifter Brewing, Nat's dad for giving me his sofa, Kevin Mund for lending me his ute to deliver it, Lauren Mund for heavy lifting, and my friend Victoria from flying in from Melbourne to come see the show."
   },
   {
     "id": "unhenged",
@@ -45,7 +47,8 @@
     "city": "Sydney, NSW",
     "type": "group",
     "upcoming": false,
-    "page": "exhibition-group-unhenged.html"
+    "page": "exhibition-group-unhenged.html",
+    "description": "A group exhibition at Goodspace Gallery featuring works by Lily Langley alongside fellow Sydney artists — unruly, unhinged, and unapologetically playful.\n\nSpecial Thanks to: Beau Russell AKA Lonely Skeleton for vision and invitation, and Goodspace Gallery for hosting."
   },
   {
     "id": "art-by-cgk",
@@ -69,7 +72,8 @@
     "city": "Sydney, NSW",
     "type": "group",
     "upcoming": false,
-    "page": "exhibition-group-phantasmagoria.html"
+    "page": "exhibition-group-phantasmagoria.html",
+    "description": "A group exhibition exploring the spectral and the strange — visions from the edges of consciousness, rendered in ink, paint, and print.\n\nKudos Offsite Presents: 'Phantasmagoria', a two person show featuring Lily Langley and Yvette Nemeth. Welcome to Phantasmagoria, the birth of a new world. Artists Yvette Nemeth and Lily Langley AKA Motormouth Comics present mythology melded with modern narratives to fabricate new myths of healing, trauma, and lived experience.\n\nSpecial Thanks to: Carmen Schieb for organising, Kudos Gallery and Join the Dots ARI for hosting."
   },
   {
     "id": "how-do-ants",
@@ -105,7 +109,8 @@
     "city": "Hobart, TAS",
     "type": "solo",
     "upcoming": false,
-    "page": "exhibition-hoons-goons.html"
+    "page": "exhibition-hoons-goons.html",
+    "description": "Speed, swagger, and suburban mythology — a love letter to the larrikin in all its forms, rendered in ink and tyre marks.\n\nThe Worst Bunch of Girls You Ever Met\n\nThe characters present within the Hoons & Goons series are the social circle that is formed through the shared experience of evenings in the pub or parking at the 7/11 to show off your car. There is an inescapable love and hate that is created when you can't stop running into someone you know. These lot are the last standing goons left behind on a Thursday night when everyone else has gone home for the night, kicked out of one pub and on their way to another with longer opening hours. Whether or not they'll be let in has not begun to cross their minds, but it's crossing ours.\n\nSpecial Thanks to: Thomas Friend and Jacob for organisation, installation, and Hobart recommendations, and also to Richard Langley for clearing up with me that we do not share a long-lost father. Thank you to Lucinda Langley for support, bankrolling, and all the laughs."
   },
   {
     "id": "bombo-buzzcock",
@@ -129,7 +134,8 @@
     "city": "Sydney, NSW",
     "type": "solo",
     "upcoming": false,
-    "page": "exhibition-death-in-suburbia.html"
+    "page": "exhibition-death-in-suburbia.html",
+    "description": "Lily Langley's debut solo exhibition — mortality, the uncanny, and the strange quiet of the cul-de-sac. A graduate student's reckoning with the neighbourhood she grew up in.\n\n'Death in Suburbia' is a series of collagraphs depicting death as a mundane eventuality as opposed to an ongoing threat. Death comes to us all, but until then he is our neighbour; just someone who lives down the road, who might be sometimes observed taking out his bins or mowing the lawn. The series takes us through a day in the domestic absurd life of death.\n\nSpecial Thanks to: Drita Ajredin for her organisation and Goodspace Gallery for hosting. Thank you to Jake H.K Lucis for the poster design and helping me install and I guess always believing in me."
   },
   {
     "id": "ad-annual-2021",

@@ -486,6 +486,11 @@ img { display: block; max-width: 100%; }
   line-height: 1.6;
   margin-top: 0.6rem;
   max-width: 560px;
+  white-space: pre-line;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .exh-badge { align-self: center; }
