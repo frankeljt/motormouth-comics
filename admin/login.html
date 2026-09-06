@@ -183,6 +183,9 @@
   </div>
 
   <script>
+    // Netlify serves this panel at site root; local admin.py serves it under /admin/
+    const ADMIN_HOME = location.pathname.startsWith('/admin') ? '/admin/' : '/';
+
     // Focus username on load
     document.getElementById('username').focus();
 
@@ -208,7 +211,7 @@
 
         if (res.ok && data.ok) {
           // Redirect to admin
-          window.location.href = '/';
+          window.location.href = ADMIN_HOME;
         } else {
           errorEl.textContent = data.error || 'Incorrect username or password.';
           errorEl.classList.add('show');

@@ -150,12 +150,14 @@
 
     function exhRow(ex) {
       const venueLine = `${esc(ex.venue)}, ${esc(ex.city||'')} &nbsp;·&nbsp; ${esc(ex.dates)}`;
+      const descLine  = ex.description ? `<div class="exh-desc">${esc(ex.description)}</div>` : '';
       if (ex.page) {
         return `<a href="${esc(ex.page)}" class="exh-item linked reveal">
           <div class="exh-year">${esc(ex.year)}</div>
           <div class="exh-body">
             <div class="exh-name">${esc(ex.displayTitle||ex.title)}</div>
             <div class="exh-venue">${venueLine}</div>
+            ${descLine}
           </div>
           <div class="exh-badge" style="display:flex;align-items:center;gap:0.75rem;">
             ${isUpcoming(ex) ? '<span class="tag yellow">Upcoming</span>' : ''}
@@ -168,6 +170,7 @@
           <div class="exh-body">
             <div class="exh-name">${esc(ex.displayTitle||ex.title)}</div>
             <div class="exh-venue">${venueLine}</div>
+            ${descLine}
           </div>
           <div class="exh-badge">${isUpcoming(ex) ? '<span class="tag yellow">Upcoming</span>' : ''}</div>
         </div>`;

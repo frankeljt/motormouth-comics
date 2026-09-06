@@ -476,6 +476,8 @@
   // STATE
   // ─────────────────────────────────────────────────────────────
   const SITE_ORIGIN = 'https://motormouthcomics.art';
+  // Netlify serves this panel at site root; local admin.py serves it under /admin/
+  const LOGIN_PATH = location.pathname.startsWith('/admin') ? '/admin/login.html' : '/login.html';
   let works = [];
   let exhibitions = [];
   let editingWorkIdx  = null;  // null = new
@@ -493,7 +495,7 @@
       ]);
     } catch(e) {
       // Session expired mid-session
-      window.location.href = '/login.html';
+      window.location.href = LOGIN_PATH;
       return;
     }
     renderWorks();
@@ -845,7 +847,7 @@
     editingExhIdx = idx;
     const ex = idx !== null ? exhibitions[idx] : {
       id:'', title:'', displayTitle:'', year: new Date().getFullYear()+'',
-      dates:'', venue:'', city:'', type:'solo', upcoming:false, page:''
+      dates:'', venue:'', city:'', type:'solo', upcoming:false, page:'', description:''
     };
 
     document.getElementById('modal-title').textContent = idx !== null ? 'Edit Exhibition' : 'Add Exhibition';
@@ -897,6 +899,11 @@
           <label>Exhibition page filename <span style="opacity:.5">(optional, e.g. exhibition-crocodile.html)</span></label>
           <input id="ex-page" type="text" value="${esc(ex.page||'')}" placeholder="exhibition-my-show.html" />
         </div>
+
+        <div class="field span2">
+          <label>Description (optional)</label>
+          <textarea id="ex-description" placeholder="Brief note about this exhibition…">${esc(ex.description||'')}</textarea>
+        </div>
       </div>
 
       <div class="modal-actions">
@@ -923,7 +930,8 @@
       city:         document.getElementById('ex-city').value.trim(),
       type:         document.getElementById('ex-type').value,
       upcoming:     document.getElementById('ex-upcoming').checked,
-      page:         document.getElementById('ex-page').value.trim() || null
+      page:         document.getElementById('ex-page').value.trim() || null,
+      description:  document.getElementById('ex-description').value.trim()
     };
 
     if (editingExhIdx !== null) {
@@ -998,7 +1006,7 @@
   // ─────────────────────────────────────────────────────────────
   async function logout() {
     await fetch('/api/logout', { method: 'POST' });
-    window.location.href = '/login.html';
+    window.location.href = LOGIN_PATH;
   }
 
   // ─────────────────────────────────────────────────────────────

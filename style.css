@@ -480,6 +480,13 @@ img { display: block; max-width: 100%; }
   color: rgba(245,240,232,0.55);
   letter-spacing: 0.05em;
 }
+.exh-desc {
+  font-size: 0.85rem;
+  color: rgba(245,240,232,0.7);
+  line-height: 1.6;
+  margin-top: 0.6rem;
+  max-width: 560px;
+}
 
 .exh-badge { align-self: center; }
 
