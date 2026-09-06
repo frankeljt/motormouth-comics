@@ -110,17 +110,6 @@
     "description": "Coloured pencil and gouache on paper, 57 x 76 cm"
   },
   {
-    "id": "feral",
-    "title": "Feral",
-    "year": "2022",
-    "type": "print",
-    "selling": false,
-    "price": null,
-    "edition": null,
-    "image": "https://motormouthcomics.com/wp-content/uploads/2025/10/feral.jpg",
-    "description": "Ink on paper, 57 x 76 cm"
-  },
-  {
     "id": "inheritance",
     "title": "Inheritance",
     "year": "2023",
