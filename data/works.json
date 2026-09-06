@@ -59,7 +59,7 @@
     "title": "Dinner Guest",
     "year": "2022",
     "type": "painting",
-    "selling": true,
+    "selling": false,
     "price": null,
     "edition": null,
     "image": "https://motormouthcomics.com/wp-content/uploads/2025/10/img_7775.jpg",
