@@ -160,7 +160,7 @@
 </head>
 <body>
   <div class="login-card">
-    <a href="/" class="login-logo">Motormouth<span>.</span></a>
+    <a href="https://motormouthcomics.art/" class="login-logo">Motormouth<span>.</span></a>
     <div class="login-eyebrow">Admin Panel</div>
     <hr class="login-divider" />
 
@@ -208,7 +208,7 @@
 
         if (res.ok && data.ok) {
           // Redirect to admin
-          window.location.href = '/admin/';
+          window.location.href = '/';
         } else {
           errorEl.textContent = data.error || 'Incorrect username or password.';
           errorEl.classList.add('show');
@@ -216,7 +216,7 @@
           document.getElementById('password').focus();
         }
       } catch (_) {
-        errorEl.textContent = 'Could not connect — is admin.py running?';
+        errorEl.textContent = 'Could not connect — check your connection and try again.';
         errorEl.classList.add('show');
       }
 

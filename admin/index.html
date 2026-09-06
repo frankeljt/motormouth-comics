@@ -403,12 +403,10 @@
 
   <!-- HEADER -->
   <div id="header">
-    <a href="../index.html" class="header-logo" target="_blank">Motormouth<span>.</span></a>
+    <a href="https://motormouthcomics.art/" class="header-logo" target="_blank">Motormouth<span>.</span></a>
     <span class="header-badge">Admin</span>
     <div class="header-spacer"></div>
-    <a href="../index.html" class="header-viewsite" target="_blank" style="margin-right:1.2rem">View Site →</a>
-    <button onclick="openPasswordModal()" style="background:none;border:none;cursor:pointer;font-family:'Space Mono',monospace;font-size:0.6rem;letter-spacing:0.1em;text-transform:uppercase;color:rgba(245,240,232,0.35);transition:color 0.15s;padding:0" onmouseover="this.style.color='rgba(245,240,232,0.8)'" onmouseout="this.style.color='rgba(245,240,232,0.35)'">Settings</button>
-    <span style="color:rgba(245,240,232,0.15);margin:0 0.9rem">|</span>
+    <a href="https://motormouthcomics.art/" class="header-viewsite" target="_blank" style="margin-right:1.2rem">View Site →</a>
     <button onclick="logout()" style="background:none;border:none;cursor:pointer;font-family:'Space Mono',monospace;font-size:0.6rem;letter-spacing:0.1em;text-transform:uppercase;color:rgba(245,240,232,0.35);transition:color 0.15s;padding:0" onmouseover="this.style.color='var(--red)'" onmouseout="this.style.color='rgba(245,240,232,0.35)'">Log out</button>
   </div>
 
@@ -477,6 +475,7 @@
   // ─────────────────────────────────────────────────────────────
   // STATE
   // ─────────────────────────────────────────────────────────────
+  const SITE_ORIGIN = 'https://motormouthcomics.art';
   let works = [];
   let exhibitions = [];
   let editingWorkIdx  = null;  // null = new
@@ -494,7 +493,7 @@
       ]);
     } catch(e) {
       // Session expired mid-session
-      window.location.href = '/admin/login.html';
+      window.location.href = '/login.html';
       return;
     }
     renderWorks();
@@ -521,7 +520,7 @@
     }
   }
 
-  async function uploadImage(file) {
+  async function uploadImage(file, filename) {
     return new Promise((resolve, reject) => {
       const reader = new FileReader();
       reader.onload = async e => {
@@ -529,7 +528,7 @@
           const r = await fetch('/api/upload', {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify({filename: file.name, data: e.target.result})
+            body: JSON.stringify({filename: filename || file.name, data: e.target.result})
           });
           const res = await r.json();
           resolve(res);
@@ -567,7 +566,7 @@
     }
     grid.innerHTML = works.map((w, i) => {
       const imgStyle = w.image
-        ? `background-image:url('../${w.image}');`
+        ? `background-image:url('${SITE_ORIGIN}/${w.image}');`
         : `background:${typeBg[w.type] || '#d8d3c8'};`;
       const priceHtml = w.selling
         ? `<div class="admin-card-price">$${Number(w.price||0).toLocaleString()}${w.edition ? ' · <span style="font-weight:400;color:rgba(26,16,8,0.5)">' + esc(w.edition) + '</span>' : ''}</div>`
@@ -654,7 +653,7 @@
             <input type="file" id="f-image" accept="image/*" onchange="handleImagePick(this)" />
             ${w.image
               ? `<button class="img-clear" onclick="clearImage(event)" title="Remove image">✕</button>
-                 <img class="img-preview" id="img-preview-el" src="../${esc(w.image)}" />`
+                 <img class="img-preview" id="img-preview-el" src="${SITE_ORIGIN}/${esc(w.image)}" />`
               : `<img class="img-preview" id="img-preview-el" style="display:none" />`}
             <div class="img-upload-label" id="upload-label">${w.image ? esc(w.image.split('/').pop()) : 'Click or drag &amp; drop an image'}</div>
           </div>
@@ -711,12 +710,32 @@
     reader.readAsDataURL(file);
   }
 
+  async function resizeImageIfNeeded(file) {
+    const MAX_DIM = 2000;
+    const SKIP_BELOW_BYTES = 1.5 * 1024 * 1024;
+    if (file.size <= SKIP_BELOW_BYTES) return { blob: file, filename: file.name };
+
+    const bitmap = await createImageBitmap(file);
+    const scale = Math.min(1, MAX_DIM / Math.max(bitmap.width, bitmap.height));
+
+    const canvas = document.createElement('canvas');
+    canvas.width = Math.round(bitmap.width * scale);
+    canvas.height = Math.round(bitmap.height * scale);
+    canvas.getContext('2d').drawImage(bitmap, 0, 0, canvas.width, canvas.height);
+
+    const blob = await new Promise(resolve => canvas.toBlob(resolve, 'image/jpeg', 0.85));
+    if (!blob) return { blob: file, filename: file.name };
+
+    return { blob, filename: file.name.replace(/\.[^.]+$/, '') + '.jpg' };
+  }
+
   async function uploadImageFile(file) {
     const btn = document.getElementById('save-btn');
     btn.innerHTML = '<span class="spinner"></span> Uploading…';
     btn.disabled = true;
     try {
-      const res = await uploadImage(file);
+      const { blob, filename } = await resizeImageIfNeeded(file);
+      const res = await uploadImage(blob, filename);
       if (res.ok) {
         pendingImagePath = res.path;
         toast('Image uploaded ✓');
@@ -724,7 +743,7 @@
         toast('Upload failed: ' + (res.error||'unknown'), true);
       }
     } catch(e) {
-      toast('Upload failed — is admin.py running?', true);
+      toast('Upload failed — check your connection and try again.', true);
     }
     btn.innerHTML = 'Save Work';
     btn.disabled = false;
@@ -787,7 +806,7 @@
       await api('works', works);
       toast('Works saved ✓');
     } catch(e) {
-      toast('Could not save — is admin.py running?', true);
+      toast('Could not save — check your connection and try again.', true);
     }
   }
 
@@ -804,7 +823,7 @@
       <div class="exh-row">
         <div class="exh-row-info">
           <div class="exh-row-title">${esc(ex.displayTitle||ex.title)}</div>
-          <div class="exh-row-sub">${esc(ex.venue)}${ex.city ? ', ' + esc(ex.city) : ''}${ex.page ? ' &nbsp;·&nbsp; <a href="../' + esc(ex.page) + '" target="_blank" style="color:inherit;opacity:.6">view →</a>' : ''}</div>
+          <div class="exh-row-sub">${esc(ex.venue)}${ex.city ? ', ' + esc(ex.city) : ''}${ex.page ? ' &nbsp;·&nbsp; <a href="' + SITE_ORIGIN + '/' + esc(ex.page) + '" target="_blank" style="color:inherit;opacity:.6">view →</a>' : ''}</div>
         </div>
         <div class="exh-row-dates">${esc(ex.dates)}</div>
         <div class="exh-row-badges">
@@ -934,7 +953,7 @@
       await api('exhibitions', exhibitions);
       toast('Exhibitions saved ✓');
     } catch(e) {
-      toast('Could not save — is admin.py running?', true);
+      toast('Could not save — check your connection and try again.', true);
     }
   }
 
@@ -979,70 +998,7 @@
   // ─────────────────────────────────────────────────────────────
   async function logout() {
     await fetch('/api/logout', { method: 'POST' });
-    window.location.href = '/admin/login.html';
-  }
-
-  function openPasswordModal() {
-    document.getElementById('modal-title').textContent = 'Change Password';
-    document.getElementById('modal-body').innerHTML = `
-      <div class="form-grid">
-        <div class="field span2">
-          <label>Username</label>
-          <input id="pw-username" type="text" autocapitalize="none" spellcheck="false" placeholder="Username" />
-        </div>
-        <div class="field span2">
-          <label>Current Password</label>
-          <input id="pw-current" type="password" autocomplete="current-password" />
-        </div>
-        <div class="field">
-          <label>New Password</label>
-          <input id="pw-new" type="password" autocomplete="new-password" />
-        </div>
-        <div class="field">
-          <label>Confirm New Password</label>
-          <input id="pw-confirm" type="password" autocomplete="new-password" />
-        </div>
-      </div>
-      <div class="modal-actions">
-        <div class="spacer"></div>
-        <button class="btn btn-sm" onclick="closeModal()">Cancel</button>
-        <button class="btn btn-primary btn-sm" onclick="savePassword()">Save Changes</button>
-      </div>`;
-
-    // Pre-fill username from page (fetched on init isn't stored, so leave blank or fetch)
-    fetch('/api/works').then(() => {}).catch(() => {});
-    openModal();
-    // focus username
-    setTimeout(() => document.getElementById('pw-username').focus(), 100);
-  }
-
-  async function savePassword() {
-    const username = document.getElementById('pw-username').value.trim();
-    const current  = document.getElementById('pw-current').value;
-    const newPw    = document.getElementById('pw-new').value;
-    const confirm  = document.getElementById('pw-confirm').value;
-
-    if (!current) { toast('Current password is required', true); return; }
-    if (!newPw)   { toast('New password is required', true); return; }
-    if (newPw !== confirm) { toast('New passwords do not match', true); return; }
-    if (newPw.length < 4)  { toast('Password must be at least 4 characters', true); return; }
-
-    try {
-      const res  = await fetch('/api/change-password', {
-        method:  'POST',
-        headers: {'Content-Type': 'application/json'},
-        body:    JSON.stringify({ username: username || undefined, current, new: newPw })
-      });
-      const data = await res.json();
-      if (data.ok) {
-        closeModal();
-        toast('Password updated ✓');
-      } else {
-        toast(data.error || 'Could not update password', true);
-      }
-    } catch(_) {
-      toast('Server error', true);
-    }
+    window.location.href = '/login.html';
   }
 
   // ─────────────────────────────────────────────────────────────
