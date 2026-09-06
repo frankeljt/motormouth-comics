@@ -141,16 +141,5 @@
     "edition": null,
     "image": "https://motormouthcomics.com/wp-content/uploads/2025/10/langley_lily_scotchbroomferalpig.jpg",
     "description": "Ink on paper, 57 x 76 cm"
-  },
-  {
-    "id": "zzz-test-entry-delete-me",
-    "title": "ZZZ Test Entry (delete me)",
-    "year": "2026",
-    "type": "print",
-    "selling": false,
-    "price": null,
-    "edition": null,
-    "image": null,
-    "description": ""
   }
 ]
