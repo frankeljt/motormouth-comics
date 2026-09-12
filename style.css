@@ -244,22 +244,6 @@ img { display: block; max-width: 100%; }
   overflow: hidden;
   white-space: nowrap;
 }
-.ticker-inner {
-  display: inline-flex;
-  gap: 3rem;
-  animation: ticker 22s linear infinite;
-}
-.ticker-inner span {
-  font-family: 'Space Mono', monospace;
-  font-size: 0.7rem;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-}
-@keyframes ticker {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
-}
-.ticker:hover .ticker-inner { animation-play-state: paused; }
 
 /* ── Filter pills ─────────────────────────────────── */
 .filter-bar {
