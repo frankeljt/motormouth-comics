@@ -679,7 +679,7 @@ footer {
 @media (max-width: 640px) { .lightbox-detail { border-left: none; border-top: var(--border); } }
 .lightbox-title { font-family: 'Bebas Neue', sans-serif; font-size: 2.5rem; line-height: 1; }
 .lightbox-meta { font-family: 'Space Mono', monospace; font-size: 0.65rem; color: #6b5f50; line-height: 2; }
-.lightbox-desc { font-size: 0.9rem; line-height: 1.7; color: #3a3028; }
+.lightbox-desc { font-size: 0.9rem; line-height: 1.7; color: #3a3028; white-space: pre-line; }
 .lightbox-price { font-family: 'Bebas Neue', sans-serif; font-size: 2rem; margin-top: auto; }
 .lightbox-close {
   position: absolute;

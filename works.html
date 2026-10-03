@@ -70,7 +70,7 @@
         <div class="lightbox-meta"  id="lbMeta"></div>
         <div class="lightbox-desc"  id="lbDesc"></div>
         <div class="lightbox-price" id="lbPrice"></div>
-        <a href="index.html#contact" class="btn btn-primary" onclick="closeLightbox()" style="margin-top:1rem;text-align:center;display:block">Enquire about this work</a>
+        <a href="index.html#contact" class="btn btn-primary" id="lbEnquire" onclick="closeLightbox()" style="margin-top:1rem;text-align:center;display:block">Enquire about this work</a>
       </div>
       <button class="lightbox-close" onclick="closeLightbox()" aria-label="Close">✕</button>
     </div>
@@ -147,11 +147,11 @@
 
       grid.innerHTML = works.map(w => {
         const imgHtml = w.image
-          ? `<img src="${w.image}" alt="${esc(w.title)}" style="width:100%;height:100%;object-fit:cover;display:block">`
+          ? `<img src="${w.image}" alt="${esc(w.title)}" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block">`
           : getPlaceholder(w.type || 'print');
 
-        const priceDisplay = w.selling
-          ? `$${Number(w.price||0).toLocaleString()}`
+        const priceDisplay = w.sold ? 'Sold'
+          : w.selling ? `$${Number(w.price||0).toLocaleString()}`
           : 'NFS';
 
         const metaParts = [w.year, w.type, w.edition].filter(Boolean);
@@ -159,6 +159,7 @@
         return `<div class="work-card reveal"
             data-type="${esc(w.type)}"
             data-selling="${w.selling}"
+            data-sold="${!!w.sold}"
             data-title="${esc(w.title)}"
             data-year="${esc(w.year||'')}"
             data-edition="${esc(w.edition||'')}"
@@ -205,7 +206,8 @@
       document.getElementById('lbDesc').textContent  = d.desc;
       const priceEl = document.getElementById('lbPrice');
       priceEl.textContent = d.price;
-      priceEl.style.color = d.selling === 'false' ? 'rgba(26,16,8,0.4)' : 'var(--ink)';
+      priceEl.style.color = d.sold === 'true' ? 'var(--red)' : d.selling === 'false' ? 'rgba(26,16,8,0.4)' : 'var(--ink)';
+      document.getElementById('lbEnquire').style.display = d.sold === 'true' ? 'none' : 'block';
       document.getElementById('lightbox').classList.add('open');
       document.body.style.overflow = 'hidden';
     }
