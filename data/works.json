@@ -864,6 +864,18 @@
     "description": "Ink and gloss varnish on tile, 20 x 20 cm.\nNo. 73 in 'Dirty Laundry', Airspace Projects, 2026."
   },
   {
+    "id": "dl-95-damien",
+    "title": "Damien",
+    "year": "2026",
+    "type": "sculpture",
+    "selling": false,
+    "sold": true,
+    "price": 250,
+    "edition": null,
+    "image": "images/works/dirty-laundry-95.jpg",
+    "description": "Glazed ceramic.\nNo. 95 in 'Dirty Laundry', Airspace Projects, 2026."
+  },
+  {
     "id": "dl-75-bettie-page-with-milk-jug-irving-klaw-c-1952",
     "title": "Bettie Page with milk jug; Irving Klaw, c. 1952 - Movie Star News Mail Order Catalogue, (1950s) now available on Ebay from user tsmithco.",
     "year": "2026",
@@ -1092,6 +1104,18 @@
     "description": "Etching on paper, 38 x 56 cm (framed).\nNo. 93 in 'Dirty Laundry', Airspace Projects, 2026."
   },
   {
+    "id": "dl-94-laundry-day",
+    "title": "Laundry Day",
+    "year": "2026",
+    "type": "painting",
+    "selling": true,
+    "sold": false,
+    "price": 700,
+    "edition": null,
+    "image": "images/works/dirty-laundry-94.jpg",
+    "description": "Acrylic, toner and gel medium on board, 90 x 60 cm.\nNo. 94 in 'Dirty Laundry', Airspace Projects, 2026."
+  },
+  {
     "id": "dl-01-the-persistence-of-memory-in-the-mind-of-somethi",
     "title": "The Persistence of Memory in the Mind of Something Living",
     "year": "2026",
@@ -1114,30 +1138,6 @@
     "edition": null,
     "image": null,
     "description": "Ink and gloss varnish on tile, 20 x 20 cm.\nNo. 74 in 'Dirty Laundry', Airspace Projects, 2026."
-  },
-  {
-    "id": "dl-94-laundry-day",
-    "title": "Laundry Day",
-    "year": "2026",
-    "type": "painting",
-    "selling": true,
-    "sold": false,
-    "price": 700,
-    "edition": null,
-    "image": null,
-    "description": "Acrylic, toner and gel medium on board, 90 x 60 cm.\nNo. 94 in 'Dirty Laundry', Airspace Projects, 2026."
-  },
-  {
-    "id": "dl-95-damien",
-    "title": "Damien",
-    "year": "2026",
-    "type": "sculpture",
-    "selling": false,
-    "sold": true,
-    "price": 250,
-    "edition": null,
-    "image": null,
-    "description": "Glazed ceramic.\nNo. 95 in 'Dirty Laundry', Airspace Projects, 2026."
   },
   {
     "id": "death-in-suburbia",
