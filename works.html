@@ -44,6 +44,7 @@
       <div class="filter-bar">
         <button class="filter-pill active" data-filter="all">All</button>
         <button class="filter-pill" data-filter="painting">Painting</button>
+        <button class="filter-pill" data-filter="drawing">Drawing</button>
         <button class="filter-pill" data-filter="print">Print</button>
         <button class="filter-pill" data-filter="sculpture">Sculpture</button>
         <span class="filter-divider"></span>
@@ -124,6 +125,10 @@
       </svg>`,
       painting: (t) => `<svg viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg">
         <rect width="400" height="500" fill="#ddd8c4"/>
+        <text x="200" y="265" text-anchor="middle" font-family="'Bebas Neue',sans-serif" font-size="52" fill="#1a1008" opacity=".18" letter-spacing="4">${t.toUpperCase()}</text>
+      </svg>`,
+      drawing: (t) => `<svg viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg">
+        <rect width="400" height="500" fill="#e4dfd2"/>
         <text x="200" y="265" text-anchor="middle" font-family="'Bebas Neue',sans-serif" font-size="52" fill="#1a1008" opacity=".18" letter-spacing="4">${t.toUpperCase()}</text>
       </svg>`,
       sculpture: (t) => `<svg viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg">

@@ -179,6 +179,7 @@
     }
     .badge-print   { background: #c8d4c0; }
     .badge-painting { background: #ddd8c4; }
+    .badge-drawing  { background: #e4dfd2; }
     .badge-sculpture{ background: #c8c0b0; }
     .badge-solo     { background: var(--paper); }
     .badge-group    { background: #e8e0d0; }
@@ -558,7 +559,7 @@
   // ─────────────────────────────────────────────────────────────
   // WORKS RENDER
   // ─────────────────────────────────────────────────────────────
-  const typeBg = { print: '#c8d4c0', painting: '#ddd8c4', sculpture: '#c8c0b0' };
+  const typeBg = { print: '#c8d4c0', painting: '#ddd8c4', drawing: '#e4dfd2', sculpture: '#c8c0b0' };
 
   function renderWorks() {
     const grid = document.getElementById('worksGrid');
@@ -623,6 +624,7 @@
           <select id="f-type">
             <option value="print"     ${w.type==='print'?'selected':''}>Print</option>
             <option value="painting"  ${w.type==='painting'?'selected':''}>Painting</option>
+            <option value="drawing"   ${w.type==='drawing'?'selected':''}>Drawing</option>
             <option value="sculpture" ${w.type==='sculpture'?'selected':''}>Sculpture</option>
           </select>
         </div>
