@@ -1,77 +1,5 @@
 [
   {
-    "id": "dl-02-dirty-laundry-1",
-    "title": "Dirty Laundry 1",
-    "year": "2026",
-    "type": "print",
-    "selling": true,
-    "sold": false,
-    "price": 275,
-    "edition": "Edition of 3",
-    "image": "images/works/dirty-laundry-02.jpg",
-    "description": "Etching on paper, 38 x 56 cm (framed).\nNo. 2 in 'Dirty Laundry', Airspace Projects, 2026."
-  },
-  {
-    "id": "dl-03-dirty-laundry-2",
-    "title": "Dirty Laundry 2",
-    "year": "2026",
-    "type": "print",
-    "selling": true,
-    "sold": false,
-    "price": 275,
-    "edition": "Edition of 3",
-    "image": "images/works/dirty-laundry-03.jpg",
-    "description": "Etching on paper, 38 x 56 cm (framed).\nNo. 3 in 'Dirty Laundry', Airspace Projects, 2026."
-  },
-  {
-    "id": "dl-04-dirty-laundry-3",
-    "title": "Dirty Laundry 3",
-    "year": "2026",
-    "type": "print",
-    "selling": true,
-    "sold": false,
-    "price": 275,
-    "edition": "Edition of 3",
-    "image": "images/works/dirty-laundry-04.jpg",
-    "description": "Etching on paper, 38 x 56 cm (framed).\nNo. 4 in 'Dirty Laundry', Airspace Projects, 2026."
-  },
-  {
-    "id": "dl-05-dirty-laundry-4",
-    "title": "Dirty Laundry 4",
-    "year": "2026",
-    "type": "print",
-    "selling": true,
-    "sold": false,
-    "price": 275,
-    "edition": "Edition of 3",
-    "image": "images/works/dirty-laundry-05.jpg",
-    "description": "Etching on paper, 38 x 56 cm (framed).\nNo. 5 in 'Dirty Laundry', Airspace Projects, 2026."
-  },
-  {
-    "id": "dl-06-he-hands-me-rubber-gloves-anyway",
-    "title": "He hands me rubber gloves anyway",
-    "year": "2025",
-    "type": "painting",
-    "selling": true,
-    "sold": false,
-    "price": 115,
-    "edition": null,
-    "image": "images/works/dirty-laundry-06.jpg",
-    "description": "Ink and gloss varnish on tile, 20 x 20 cm.\nNo. 6 in 'Dirty Laundry', Airspace Projects, 2026."
-  },
-  {
-    "id": "dl-07-unnamed-young-ivory-coast-woman-in-ceremonial-pa",
-    "title": "Unnamed “young Ivory Coast woman in ceremonial paint”, Dominique Darbois - Weyer, E. M., Jr. (1959). Primitive peoples today. Doubleday.",
-    "year": "2026",
-    "type": "painting",
-    "selling": true,
-    "sold": false,
-    "price": 115,
-    "edition": null,
-    "image": "images/works/dirty-laundry-07.jpg",
-    "description": "Ink and gloss varnish on tile, 20 x 20 cm.\nNo. 7 in 'Dirty Laundry', Airspace Projects, 2026."
-  },
-  {
     "id": "dl-08-serena-williams-defeats-carina-witth-ft-sarah-st",
     "title": "Serena Williams defeats Carina Witthöft; Sarah Stier - Tong, J. (2018, August 30). Serena Williams is triumphant in lavender tutu for second U.S. Open win. Yahoo Life.",
     "year": "2026",
@@ -84,16 +12,16 @@
     "description": "Ink and gloss varnish on tile, 20 x 20 cm.\nNo. 8 in 'Dirty Laundry', Airspace Projects, 2026."
   },
   {
-    "id": "dl-09-brittany-spears-stalked-by-paparazzi-wenn",
-    "title": "Brittany Spears stalked by Paparazzi; WENN - 24sata. (2007, December 29). Britney Spears autom po gradu jurila oko 160 km/h.. Styria Media Group.",
+    "id": "dl-02-dirty-laundry-1",
+    "title": "Dirty Laundry 1",
     "year": "2026",
-    "type": "painting",
+    "type": "print",
     "selling": true,
     "sold": false,
-    "price": 115,
-    "edition": null,
-    "image": "images/works/dirty-laundry-09.jpg",
-    "description": "Ink and gloss varnish on tile, 20 x 20 cm.\nNo. 9 in 'Dirty Laundry', Airspace Projects, 2026."
+    "price": 275,
+    "edition": "Edition of 3",
+    "image": "images/works/dirty-laundry-02.jpg",
+    "description": "Etching on paper, 38 x 56 cm (framed).\nNo. 2 in 'Dirty Laundry', Airspace Projects, 2026."
   },
   {
     "id": "dl-10-anything-anything",
@@ -108,28 +36,16 @@
     "description": "Ink and gloss varnish on tile, 20 x 20 cm.\nNo. 10 in 'Dirty Laundry', Airspace Projects, 2026."
   },
   {
-    "id": "dl-11-bettie-page-attends-a-caller-bunny-yeager-1954",
-    "title": "Bettie Page attends a caller; Bunny Yeager, 1954 - Mason, P., & Yeager, B. (2014). Bettie Page: Queen of curves. Rizzoli.",
+    "id": "dl-03-dirty-laundry-2",
+    "title": "Dirty Laundry 2",
     "year": "2026",
-    "type": "painting",
+    "type": "print",
     "selling": true,
     "sold": false,
-    "price": 115,
-    "edition": null,
-    "image": "images/works/dirty-laundry-11.jpg",
-    "description": "Ink and gloss varnish on tile, 20 x 20 cm.\nNo. 11 in 'Dirty Laundry', Airspace Projects, 2026."
-  },
-  {
-    "id": "dl-12-grace-jones-james-baes",
-    "title": "Grace Jones; James Baes - Baes, J. (Photographer). (1982, March). Grace Jones [Fashion pictorial]. Lui, (218). Filipacchi Editions.",
-    "year": "2026",
-    "type": "painting",
-    "selling": true,
-    "sold": false,
-    "price": 115,
-    "edition": null,
-    "image": "images/works/dirty-laundry-12.jpg",
-    "description": "Ink and gloss varnish on tile, 20 x 20 cm.\nNo. 12 in 'Dirty Laundry', Airspace Projects, 2026."
+    "price": 275,
+    "edition": "Edition of 3",
+    "image": "images/works/dirty-laundry-03.jpg",
+    "description": "Etching on paper, 38 x 56 cm (framed).\nNo. 3 in 'Dirty Laundry', Airspace Projects, 2026."
   },
   {
     "id": "dl-13-fish-special",
@@ -144,6 +60,162 @@
     "description": "Ink and gloss varnish on tile, 20 x 20 cm.\nNo. 13 in 'Dirty Laundry', Airspace Projects, 2026."
   },
   {
+    "id": "dl-04-dirty-laundry-3",
+    "title": "Dirty Laundry 3",
+    "year": "2026",
+    "type": "print",
+    "selling": true,
+    "sold": false,
+    "price": 275,
+    "edition": "Edition of 3",
+    "image": "images/works/dirty-laundry-04.jpg",
+    "description": "Etching on paper, 38 x 56 cm (framed).\nNo. 4 in 'Dirty Laundry', Airspace Projects, 2026."
+  },
+  {
+    "id": "dl-18-bettie-page-as-jungle-bettie-with-zebras-bunny-y",
+    "title": "Bettie Page as “Jungle Bettie” with zebras; Bunny Yeager, 1954. - Mason, P., & Yeager, B. (2014). Bettie Page: Queen of curves. Rizzoli.",
+    "year": "2026",
+    "type": "painting",
+    "selling": false,
+    "sold": true,
+    "price": 115,
+    "edition": null,
+    "image": "images/works/dirty-laundry-18.jpg",
+    "description": "Ink and gloss varnish on tile, 20 x 20 cm.\nNo. 18 in 'Dirty Laundry', Airspace Projects, 2026."
+  },
+  {
+    "id": "dl-05-dirty-laundry-4",
+    "title": "Dirty Laundry 4",
+    "year": "2026",
+    "type": "print",
+    "selling": true,
+    "sold": false,
+    "price": 275,
+    "edition": "Edition of 3",
+    "image": "images/works/dirty-laundry-05.jpg",
+    "description": "Etching on paper, 38 x 56 cm (framed).\nNo. 5 in 'Dirty Laundry', Airspace Projects, 2026."
+  },
+  {
+    "id": "dl-19-ophelia-ii",
+    "title": "Ophelia II",
+    "year": "2026",
+    "type": "painting",
+    "selling": false,
+    "sold": true,
+    "price": 115,
+    "edition": null,
+    "image": "images/works/dirty-laundry-19.jpg",
+    "description": "Ink and gloss varnish on tile, 20 x 20 cm.\nNo. 19 in 'Dirty Laundry', Airspace Projects, 2026."
+  },
+  {
+    "id": "dl-06-he-hands-me-rubber-gloves-anyway",
+    "title": "He hands me rubber gloves anyway",
+    "year": "2025",
+    "type": "painting",
+    "selling": true,
+    "sold": false,
+    "price": 115,
+    "edition": null,
+    "image": "images/works/dirty-laundry-06.jpg",
+    "description": "Ink and gloss varnish on tile, 20 x 20 cm.\nNo. 6 in 'Dirty Laundry', Airspace Projects, 2026."
+  },
+  {
+    "id": "dl-20-i-copped-that-140-parking-fine-while-i-was-waiti",
+    "title": "I copped that $140 parking fine while I was waiting for you to pick up your silly guitar and since I got no returns on the investment I’m going to write a reverse I.O.U on a dead fish and launch it through your third-floor window. I have a bicep of steel and my ability with a rod n reel is unparalleled",
+    "year": "2025",
+    "type": "painting",
+    "selling": false,
+    "sold": true,
+    "price": 115,
+    "edition": null,
+    "image": "images/works/dirty-laundry-20.jpg",
+    "description": "Ink and gloss varnish on tile, 20 x 20 cm.\nNo. 20 in 'Dirty Laundry', Airspace Projects, 2026."
+  },
+  {
+    "id": "dl-07-unnamed-young-ivory-coast-woman-in-ceremonial-pa",
+    "title": "Unnamed “young Ivory Coast woman in ceremonial paint”, Dominique Darbois - Weyer, E. M., Jr. (1959). Primitive peoples today. Doubleday.",
+    "year": "2026",
+    "type": "painting",
+    "selling": true,
+    "sold": false,
+    "price": 115,
+    "edition": null,
+    "image": "images/works/dirty-laundry-07.jpg",
+    "description": "Ink and gloss varnish on tile, 20 x 20 cm.\nNo. 7 in 'Dirty Laundry', Airspace Projects, 2026."
+  },
+  {
+    "id": "dl-21-fatima-al-qaws-went-looking-for-her-son-zayed-am",
+    "title": "‘Fatima al-Qaws went looking for her son Zayed amid the violence in Yemen. This is the moment she found him alive’, Samuel Aranda, 15 October, 2011. - The New York Times.",
+    "year": "2026",
+    "type": "painting",
+    "selling": false,
+    "sold": true,
+    "price": 115,
+    "edition": null,
+    "image": "images/works/dirty-laundry-21.jpg",
+    "description": "Ink and gloss varnish on tile, 20 x 20 cm.\nNo. 21 in 'Dirty Laundry', Airspace Projects, 2026."
+  },
+  {
+    "id": "dl-09-brittany-spears-stalked-by-paparazzi-wenn",
+    "title": "Brittany Spears stalked by Paparazzi; WENN - 24sata. (2007, December 29). Britney Spears autom po gradu jurila oko 160 km/h.. Styria Media Group.",
+    "year": "2026",
+    "type": "painting",
+    "selling": true,
+    "sold": false,
+    "price": 115,
+    "edition": null,
+    "image": "images/works/dirty-laundry-09.jpg",
+    "description": "Ink and gloss varnish on tile, 20 x 20 cm.\nNo. 9 in 'Dirty Laundry', Airspace Projects, 2026."
+  },
+  {
+    "id": "dl-22-blue-mackerel",
+    "title": "Blue Mackerel",
+    "year": "2026",
+    "type": "painting",
+    "selling": false,
+    "sold": true,
+    "price": 115,
+    "edition": null,
+    "image": "images/works/dirty-laundry-22.jpg",
+    "description": "Ink and gloss varnish on tile, 20 x 20 cm.\nNo. 22 in 'Dirty Laundry', Airspace Projects, 2026."
+  },
+  {
+    "id": "dl-11-bettie-page-attends-a-caller-bunny-yeager-1954",
+    "title": "Bettie Page attends a caller; Bunny Yeager, 1954 - Mason, P., & Yeager, B. (2014). Bettie Page: Queen of curves. Rizzoli.",
+    "year": "2026",
+    "type": "painting",
+    "selling": true,
+    "sold": false,
+    "price": 115,
+    "edition": null,
+    "image": "images/works/dirty-laundry-11.jpg",
+    "description": "Ink and gloss varnish on tile, 20 x 20 cm.\nNo. 11 in 'Dirty Laundry', Airspace Projects, 2026."
+  },
+  {
+    "id": "dl-32-ophelia-i",
+    "title": "Ophelia I",
+    "year": "2026",
+    "type": "painting",
+    "selling": false,
+    "sold": true,
+    "price": 115,
+    "edition": null,
+    "image": "images/works/dirty-laundry-32.jpg",
+    "description": "Ink and gloss varnish on tile, 20 x 20 cm.\nNo. 32 in 'Dirty Laundry', Airspace Projects, 2026."
+  },
+  {
+    "id": "dl-12-grace-jones-james-baes",
+    "title": "Grace Jones; James Baes - Baes, J. (Photographer). (1982, March). Grace Jones [Fashion pictorial]. Lui, (218). Filipacchi Editions.",
+    "year": "2026",
+    "type": "painting",
+    "selling": true,
+    "sold": false,
+    "price": 115,
+    "edition": null,
+    "image": "images/works/dirty-laundry-12.jpg",
+    "description": "Ink and gloss varnish on tile, 20 x 20 cm.\nNo. 12 in 'Dirty Laundry', Airspace Projects, 2026."
+  },
+  {
     "id": "dl-14-i-like-menthols-and-i-like-brown-liquor-my-pancr",
     "title": "I like menthols and I like brown liquor. My pancreas don’t work no more.",
     "year": "2026",
@@ -154,6 +226,18 @@
     "edition": null,
     "image": "images/works/dirty-laundry-14.jpg",
     "description": "Ink and gloss varnish on tile, 20 x 20 cm.\nNo. 14 in 'Dirty Laundry', Airspace Projects, 2026."
+  },
+  {
+    "id": "dl-33-wednesday-night",
+    "title": "Wednesday Night",
+    "year": "2025",
+    "type": "painting",
+    "selling": false,
+    "sold": true,
+    "price": 115,
+    "edition": null,
+    "image": "images/works/dirty-laundry-33.jpg",
+    "description": "Ink and gloss varnish on tile, 20 x 20 cm.\nNo. 33 in 'Dirty Laundry', Airspace Projects, 2026."
   },
   {
     "id": "dl-15-bettie-page-and-bunny-yeager-in-virginia-key-sta",
@@ -180,6 +264,18 @@
     "description": "Ink and gloss varnish on tile, 20 x 20 cm.\nNo. 16 in 'Dirty Laundry', Airspace Projects, 2026."
   },
   {
+    "id": "dl-39-gelatine-dinner-and-barbiturates-chaser-for-good",
+    "title": "Gelatine dinner and barbiturates chaser for good girls in 1954",
+    "year": "2025",
+    "type": "painting",
+    "selling": false,
+    "sold": true,
+    "price": 115,
+    "edition": null,
+    "image": "images/works/dirty-laundry-39.jpg",
+    "description": "Ink and gloss varnish on tile, 20 x 20 cm.\nNo. 39 in 'Dirty Laundry', Airspace Projects, 2026."
+  },
+  {
     "id": "dl-17-liability",
     "title": "Liability",
     "year": "2026",
@@ -192,66 +288,6 @@
     "description": "Ink and gloss varnish on tile, 20 x 20 cm.\nNo. 17 in 'Dirty Laundry', Airspace Projects, 2026."
   },
   {
-    "id": "dl-18-bettie-page-as-jungle-bettie-with-zebras-bunny-y",
-    "title": "Bettie Page as “Jungle Bettie” with zebras; Bunny Yeager, 1954. - Mason, P., & Yeager, B. (2014). Bettie Page: Queen of curves. Rizzoli.",
-    "year": "2026",
-    "type": "painting",
-    "selling": false,
-    "sold": true,
-    "price": 115,
-    "edition": null,
-    "image": "images/works/dirty-laundry-18.jpg",
-    "description": "Ink and gloss varnish on tile, 20 x 20 cm.\nNo. 18 in 'Dirty Laundry', Airspace Projects, 2026."
-  },
-  {
-    "id": "dl-19-ophelia-ii",
-    "title": "Ophelia II",
-    "year": "2026",
-    "type": "painting",
-    "selling": false,
-    "sold": true,
-    "price": 115,
-    "edition": null,
-    "image": "images/works/dirty-laundry-19.jpg",
-    "description": "Ink and gloss varnish on tile, 20 x 20 cm.\nNo. 19 in 'Dirty Laundry', Airspace Projects, 2026."
-  },
-  {
-    "id": "dl-20-i-copped-that-140-parking-fine-while-i-was-waiti",
-    "title": "I copped that $140 parking fine while I was waiting for you to pick up your silly guitar and since I got no returns on the investment I’m going to write a reverse I.O.U on a dead fish and launch it through your third-floor window. I have a bicep of steel and my ability with a rod n reel is unparalleled",
-    "year": "2025",
-    "type": "painting",
-    "selling": false,
-    "sold": true,
-    "price": 115,
-    "edition": null,
-    "image": "images/works/dirty-laundry-20.jpg",
-    "description": "Ink and gloss varnish on tile, 20 x 20 cm.\nNo. 20 in 'Dirty Laundry', Airspace Projects, 2026."
-  },
-  {
-    "id": "dl-21-fatima-al-qaws-went-looking-for-her-son-zayed-am",
-    "title": "‘Fatima al-Qaws went looking for her son Zayed amid the violence in Yemen. This is the moment she found him alive’, Samuel Aranda, 15 October, 2011. - The New York Times.",
-    "year": "2026",
-    "type": "painting",
-    "selling": false,
-    "sold": true,
-    "price": 115,
-    "edition": null,
-    "image": "images/works/dirty-laundry-21.jpg",
-    "description": "Ink and gloss varnish on tile, 20 x 20 cm.\nNo. 21 in 'Dirty Laundry', Airspace Projects, 2026."
-  },
-  {
-    "id": "dl-22-blue-mackerel",
-    "title": "Blue Mackerel",
-    "year": "2026",
-    "type": "painting",
-    "selling": false,
-    "sold": true,
-    "price": 115,
-    "edition": null,
-    "image": "images/works/dirty-laundry-22.jpg",
-    "description": "Ink and gloss varnish on tile, 20 x 20 cm.\nNo. 22 in 'Dirty Laundry', Airspace Projects, 2026."
-  },
-  {
     "id": "dl-23-unnamed-proud-dahomey-belle-dominique-darbois",
     "title": "Unnamed “proud Dahomey belle”, Dominique Darbois - Weyer, E. M., Jr. (1959). Primitive peoples today. Doubleday.",
     "year": "2026",
@@ -262,6 +298,18 @@
     "edition": null,
     "image": "images/works/dirty-laundry-23.jpg",
     "description": "Ink and gloss varnish on tile, 20 x 20 cm.\nNo. 23 in 'Dirty Laundry', Airspace Projects, 2026."
+  },
+  {
+    "id": "dl-43-salmon-heads",
+    "title": "Salmon Heads",
+    "year": "2026",
+    "type": "painting",
+    "selling": false,
+    "sold": true,
+    "price": 115,
+    "edition": null,
+    "image": "images/works/dirty-laundry-43.jpg",
+    "description": "Ink and gloss varnish on tile, 20 x 20 cm.\nNo. 43 in 'Dirty Laundry', Airspace Projects, 2026."
   },
   {
     "id": "dl-24-bettie-page-as-jungle-bettie-with-unnamed-actor",
@@ -288,6 +336,18 @@
     "description": "Ink and gloss varnish on tile, 20 x 20 cm.\nNo. 25 in 'Dirty Laundry', Airspace Projects, 2026."
   },
   {
+    "id": "dl-45-public-bathroom-plug",
+    "title": "Public Bathroom Plug",
+    "year": "2026",
+    "type": "painting",
+    "selling": false,
+    "sold": true,
+    "price": 115,
+    "edition": null,
+    "image": "images/works/dirty-laundry-45.jpg",
+    "description": "Ink and gloss varnish on tile, 20 x 20 cm.\nNo. 45 in 'Dirty Laundry', Airspace Projects, 2026."
+  },
+  {
     "id": "dl-26-akokichi-buriteri-yuka-and-fumikko-as-egg-all-st",
     "title": "Akokichi, Buriteri, Yuka and Fumikko as “Egg All Stars” II, Ryota Suzuki : Yoshihisa Miyazawa - Egg All Stars [Special issue]. Egg. (2000, June). Taiyoh Tosho",
     "year": "2026",
@@ -310,6 +370,18 @@
     "edition": null,
     "image": "images/works/dirty-laundry-27.jpg",
     "description": "Ink and gloss varnish on tile, 20 x 20 cm.\nNo. 27 in 'Dirty Laundry', Airspace Projects, 2026."
+  },
+  {
+    "id": "dl-47-erotic-memories-of-a-past-life",
+    "title": "Erotic Memories of a Past Life",
+    "year": "2026",
+    "type": "painting",
+    "selling": false,
+    "sold": true,
+    "price": 115,
+    "edition": null,
+    "image": "images/works/dirty-laundry-47.jpg",
+    "description": "Ink and gloss varnish on tile, 20 x 20 cm.\nNo. 47 in 'Dirty Laundry', Airspace Projects, 2026."
   },
   {
     "id": "dl-28-suburbs",
@@ -336,6 +408,18 @@
     "description": "Ink and gloss varnish on tile, 20 x 20 cm.\nNo. 29 in 'Dirty Laundry', Airspace Projects, 2026."
   },
   {
+    "id": "dl-48-masuimi-max-as-nurse-james-james-020-7622-5759",
+    "title": "Masuimi Max as nurse; James & James 020 7622 5759 - Woodward, T. (Ed.). (2001, Summer). Skin Two (No. 36). Tim Woodward Publishing, Ltd.",
+    "year": "2026",
+    "type": "painting",
+    "selling": false,
+    "sold": true,
+    "price": 115,
+    "edition": null,
+    "image": "images/works/dirty-laundry-48.jpg",
+    "description": "Ink and gloss varnish on tile, 20 x 20 cm.\nNo. 48 in 'Dirty Laundry', Airspace Projects, 2026."
+  },
+  {
     "id": "dl-30-uma-thurman-and-lucy-liu-on-set-andrew-cooper",
     "title": "Uma Thurman and Lucy Liu on set; Andrew Cooper - Tarantino, Q. (Director). (2003). Kill Bill: Volume 1 [Film]. A Band Apart; Miramax Films.",
     "year": "2026",
@@ -360,28 +444,16 @@
     "description": "Ink and gloss varnish on tile, 20 x 20 cm.\nNo. 31 in 'Dirty Laundry', Airspace Projects, 2026."
   },
   {
-    "id": "dl-32-ophelia-i",
-    "title": "Ophelia I",
+    "id": "dl-50-nadja-as-leda-helmut-newton-1994",
+    "title": "Nadja as Leda - Helmut Newton, 1994",
     "year": "2026",
     "type": "painting",
     "selling": false,
     "sold": true,
     "price": 115,
     "edition": null,
-    "image": "images/works/dirty-laundry-32.jpg",
-    "description": "Ink and gloss varnish on tile, 20 x 20 cm.\nNo. 32 in 'Dirty Laundry', Airspace Projects, 2026."
-  },
-  {
-    "id": "dl-33-wednesday-night",
-    "title": "Wednesday Night",
-    "year": "2025",
-    "type": "painting",
-    "selling": false,
-    "sold": true,
-    "price": 115,
-    "edition": null,
-    "image": "images/works/dirty-laundry-33.jpg",
-    "description": "Ink and gloss varnish on tile, 20 x 20 cm.\nNo. 33 in 'Dirty Laundry', Airspace Projects, 2026."
+    "image": "images/works/dirty-laundry-50.jpg",
+    "description": "Ink and gloss varnish on tile, 20 x 20 cm.\nNo. 50 in 'Dirty Laundry', Airspace Projects, 2026."
   },
   {
     "id": "dl-34-eva-in-harbour-after-helmut-newton",
@@ -406,6 +478,18 @@
     "edition": null,
     "image": "images/works/dirty-laundry-35.jpg",
     "description": "Ink and gloss varnish on tile, 20 x 20 cm.\nNo. 35 in 'Dirty Laundry', Airspace Projects, 2026."
+  },
+  {
+    "id": "dl-51-in-the-car-outside",
+    "title": "In the car outside",
+    "year": "2025",
+    "type": "painting",
+    "selling": false,
+    "sold": true,
+    "price": 115,
+    "edition": null,
+    "image": "images/works/dirty-laundry-51.jpg",
+    "description": "Ink and gloss varnish on tile, 20 x 20 cm.\nNo. 51 in 'Dirty Laundry', Airspace Projects, 2026."
   },
   {
     "id": "dl-36-bettie-page-with-vizcaya-villa-and-estate-in-bac",
@@ -444,16 +528,16 @@
     "description": "Ink and gloss varnish on tile, 20 x 20 cm.\nNo. 38 in 'Dirty Laundry', Airspace Projects, 2026."
   },
   {
-    "id": "dl-39-gelatine-dinner-and-barbiturates-chaser-for-good",
-    "title": "Gelatine dinner and barbiturates chaser for good girls in 1954",
-    "year": "2025",
+    "id": "dl-52-slimy-mackerel",
+    "title": "Slimy Mackerel",
+    "year": "2026",
     "type": "painting",
     "selling": false,
     "sold": true,
     "price": 115,
     "edition": null,
-    "image": "images/works/dirty-laundry-39.jpg",
-    "description": "Ink and gloss varnish on tile, 20 x 20 cm.\nNo. 39 in 'Dirty Laundry', Airspace Projects, 2026."
+    "image": "images/works/dirty-laundry-52.jpg",
+    "description": "Ink and gloss varnish on tile, 20 x 20 cm.\nNo. 52 in 'Dirty Laundry', Airspace Projects, 2026."
   },
   {
     "id": "dl-40-kazuyo-19-and-takako-18-shoichi-aoki",
@@ -492,16 +576,16 @@
     "description": "Ink and gloss varnish on tile, 20 x 20 cm.\nNo. 42 in 'Dirty Laundry', Airspace Projects, 2026."
   },
   {
-    "id": "dl-43-salmon-heads",
-    "title": "Salmon Heads",
+    "id": "dl-54-megan-thee-stallion-inside-cobra",
+    "title": "Megan Thee Stallion inside Cobra; Megan Thee Stallion. (2023, November 3). Megan Thee Stallion - Cobra [Official Video] [Music video]. YouTube.",
     "year": "2026",
     "type": "painting",
     "selling": false,
     "sold": true,
     "price": 115,
     "edition": null,
-    "image": "images/works/dirty-laundry-43.jpg",
-    "description": "Ink and gloss varnish on tile, 20 x 20 cm.\nNo. 43 in 'Dirty Laundry', Airspace Projects, 2026."
+    "image": "images/works/dirty-laundry-54.jpg",
+    "description": "Ink and gloss varnish on tile, 20 x 20 cm.\nNo. 54 in 'Dirty Laundry', Airspace Projects, 2026."
   },
   {
     "id": "dl-44-slices-of-life-helmut-newton-1994",
@@ -516,18 +600,6 @@
     "description": "Ink and gloss varnish on tile, 20 x 20 cm.\nNo. 44 in 'Dirty Laundry', Airspace Projects, 2026."
   },
   {
-    "id": "dl-45-public-bathroom-plug",
-    "title": "Public Bathroom Plug",
-    "year": "2026",
-    "type": "painting",
-    "selling": false,
-    "sold": true,
-    "price": 115,
-    "edition": null,
-    "image": "images/works/dirty-laundry-45.jpg",
-    "description": "Ink and gloss varnish on tile, 20 x 20 cm.\nNo. 45 in 'Dirty Laundry', Airspace Projects, 2026."
-  },
-  {
     "id": "dl-46-maisuke-19-shoichi-aoki",
     "title": "Maisuke, 19 - Shoichi Aoki. (2005). Fresh fruits. Phaidon Press",
     "year": "2026",
@@ -538,30 +610,6 @@
     "edition": null,
     "image": "images/works/dirty-laundry-46.jpg",
     "description": "Ink and gloss varnish on tile, 20 x 20 cm.\nNo. 46 in 'Dirty Laundry', Airspace Projects, 2026."
-  },
-  {
-    "id": "dl-47-erotic-memories-of-a-past-life",
-    "title": "Erotic Memories of a Past Life",
-    "year": "2026",
-    "type": "painting",
-    "selling": false,
-    "sold": true,
-    "price": 115,
-    "edition": null,
-    "image": "images/works/dirty-laundry-47.jpg",
-    "description": "Ink and gloss varnish on tile, 20 x 20 cm.\nNo. 47 in 'Dirty Laundry', Airspace Projects, 2026."
-  },
-  {
-    "id": "dl-48-masuimi-max-as-nurse-james-james-020-7622-5759",
-    "title": "Masuimi Max as nurse; James & James 020 7622 5759 - Woodward, T. (Ed.). (2001, Summer). Skin Two (No. 36). Tim Woodward Publishing, Ltd.",
-    "year": "2026",
-    "type": "painting",
-    "selling": false,
-    "sold": true,
-    "price": 115,
-    "edition": null,
-    "image": "images/works/dirty-laundry-48.jpg",
-    "description": "Ink and gloss varnish on tile, 20 x 20 cm.\nNo. 48 in 'Dirty Laundry', Airspace Projects, 2026."
   },
   {
     "id": "dl-49-unnamed-masai-girl-and-sister-gatti-expeditions",
@@ -576,40 +624,16 @@
     "description": "Ink and gloss varnish on tile, 20 x 20 cm.\nNo. 49 in 'Dirty Laundry', Airspace Projects, 2026."
   },
   {
-    "id": "dl-50-nadja-as-leda-helmut-newton-1994",
-    "title": "Nadja as Leda - Helmut Newton, 1994",
+    "id": "dl-57-cathy-freeman-ezra-shaw-2000",
+    "title": "Cathy Freeman; Ezra Shaw, 2000 - Scroggy, A. (2025, September 25). Cathy’s moment. Australian Geographic.",
     "year": "2026",
     "type": "painting",
     "selling": false,
     "sold": true,
     "price": 115,
     "edition": null,
-    "image": "images/works/dirty-laundry-50.jpg",
-    "description": "Ink and gloss varnish on tile, 20 x 20 cm.\nNo. 50 in 'Dirty Laundry', Airspace Projects, 2026."
-  },
-  {
-    "id": "dl-51-in-the-car-outside",
-    "title": "In the car outside",
-    "year": "2025",
-    "type": "painting",
-    "selling": false,
-    "sold": true,
-    "price": 115,
-    "edition": null,
-    "image": "images/works/dirty-laundry-51.jpg",
-    "description": "Ink and gloss varnish on tile, 20 x 20 cm.\nNo. 51 in 'Dirty Laundry', Airspace Projects, 2026."
-  },
-  {
-    "id": "dl-52-slimy-mackerel",
-    "title": "Slimy Mackerel",
-    "year": "2026",
-    "type": "painting",
-    "selling": false,
-    "sold": true,
-    "price": 115,
-    "edition": null,
-    "image": "images/works/dirty-laundry-52.jpg",
-    "description": "Ink and gloss varnish on tile, 20 x 20 cm.\nNo. 52 in 'Dirty Laundry', Airspace Projects, 2026."
+    "image": "images/works/dirty-laundry-57.jpg",
+    "description": "Ink and gloss varnish on tile, 20 x 20 cm.\nNo. 57 in 'Dirty Laundry', Airspace Projects, 2026."
   },
   {
     "id": "dl-53-cessnock-motel-hallway",
@@ -622,18 +646,6 @@
     "edition": null,
     "image": "images/works/dirty-laundry-53.jpg",
     "description": "Ink and gloss varnish on tile, 20 x 20 cm.\nNo. 53 in 'Dirty Laundry', Airspace Projects, 2026."
-  },
-  {
-    "id": "dl-54-megan-thee-stallion-inside-cobra",
-    "title": "Megan Thee Stallion inside Cobra; Megan Thee Stallion. (2023, November 3). Megan Thee Stallion - Cobra [Official Video] [Music video]. YouTube.",
-    "year": "2026",
-    "type": "painting",
-    "selling": false,
-    "sold": true,
-    "price": 115,
-    "edition": null,
-    "image": "images/works/dirty-laundry-54.jpg",
-    "description": "Ink and gloss varnish on tile, 20 x 20 cm.\nNo. 54 in 'Dirty Laundry', Airspace Projects, 2026."
   },
   {
     "id": "dl-55-sissy-spacek-as-carrie",
@@ -660,18 +672,6 @@
     "description": "Ink and gloss varnish on tile, 20 x 20 cm.\nNo. 56 in 'Dirty Laundry', Airspace Projects, 2026."
   },
   {
-    "id": "dl-57-cathy-freeman-ezra-shaw-2000",
-    "title": "Cathy Freeman; Ezra Shaw, 2000 - Scroggy, A. (2025, September 25). Cathy’s moment. Australian Geographic.",
-    "year": "2026",
-    "type": "painting",
-    "selling": false,
-    "sold": true,
-    "price": 115,
-    "edition": null,
-    "image": "images/works/dirty-laundry-57.jpg",
-    "description": "Ink and gloss varnish on tile, 20 x 20 cm.\nNo. 57 in 'Dirty Laundry', Airspace Projects, 2026."
-  },
-  {
     "id": "dl-58-werewolf-wash-day",
     "title": "Werewolf Wash Day",
     "year": "2026",
@@ -682,18 +682,6 @@
     "edition": null,
     "image": "images/works/dirty-laundry-58.jpg",
     "description": "Ink and gloss varnish on tile, 20 x 20 cm.\nNo. 58 in 'Dirty Laundry', Airspace Projects, 2026."
-  },
-  {
-    "id": "dl-59-notes-from-lynchs-private-diary-reveals-the-eras",
-    "title": "Notes from Lynch's private diary reveals the eraserhead baby was actually prince Charles reincarnated as a tampax as per Camilla's wishes. Thoughts and prayers are with their family right now as I’m pretty sure Charles is already dead. And I dare say we will all be running to the supermarket in the hopes of scoring the lucky box",
-    "year": "2025",
-    "type": "painting",
-    "selling": false,
-    "sold": true,
-    "price": 115,
-    "edition": null,
-    "image": "images/works/dirty-laundry-59.jpg",
-    "description": "Ink and gloss varnish on tile, 20 x 20 cm.\nNo. 59 in 'Dirty Laundry', Airspace Projects, 2026."
   },
   {
     "id": "dl-60-darryl-hannah-as-the-girl-who-fell-to-earth-helm",
@@ -732,16 +720,16 @@
     "description": "Ink and gloss varnish on tile, 20 x 20 cm.\nNo. 62 in 'Dirty Laundry', Airspace Projects, 2026."
   },
   {
-    "id": "dl-63-unnamed-london-dyke-marchers-iii-elif-gonen",
-    "title": "Unnamed “London Dyke Marchers” III, Elif Gonen - Gonen, E. (2026, June 22). Lesbians take London for the Dyke March 2026. Dazed. Dazed Digital.",
-    "year": "2026",
+    "id": "dl-59-notes-from-lynchs-private-diary-reveals-the-eras",
+    "title": "Notes from Lynch's private diary reveals the eraserhead baby was actually prince Charles reincarnated as a tampax as per Camilla's wishes. Thoughts and prayers are with their family right now as I’m pretty sure Charles is already dead. And I dare say we will all be running to the supermarket in the hopes of scoring the lucky box",
+    "year": "2025",
     "type": "painting",
     "selling": false,
     "sold": true,
     "price": 115,
     "edition": null,
-    "image": "images/works/dirty-laundry-63.jpg",
-    "description": "Ink and gloss varnish on tile, 20 x 20 cm.\nNo. 63 in 'Dirty Laundry', Airspace Projects, 2026."
+    "image": "images/works/dirty-laundry-59.jpg",
+    "description": "Ink and gloss varnish on tile, 20 x 20 cm.\nNo. 59 in 'Dirty Laundry', Airspace Projects, 2026."
   },
   {
     "id": "dl-64-unnamed-london-dyke-marchers-vi-elif-gonen",
@@ -754,18 +742,6 @@
     "edition": null,
     "image": "images/works/dirty-laundry-64.jpg",
     "description": "Ink and gloss varnish on tile, 20 x 20 cm.\nNo. 64 in 'Dirty Laundry', Airspace Projects, 2026."
-  },
-  {
-    "id": "dl-65-tina-majorino-as-deb-i",
-    "title": "Tina Majorino as Deb I - Hess, J. (Director). (2004). Napoleon Dynamite [Film]. Fox Searchlight Pictures.",
-    "year": "2026",
-    "type": "painting",
-    "selling": false,
-    "sold": true,
-    "price": 115,
-    "edition": null,
-    "image": "images/works/dirty-laundry-65.jpg",
-    "description": "Ink and gloss varnish on tile, 20 x 20 cm.\nNo. 65 in 'Dirty Laundry', Airspace Projects, 2026."
   },
   {
     "id": "dl-66-tina-majorino-as-deb-ii",
@@ -790,6 +766,18 @@
     "edition": null,
     "image": "images/works/dirty-laundry-67.jpg",
     "description": "Ink and gloss varnish on tile, 20 x 20 cm.\nNo. 67 in 'Dirty Laundry', Airspace Projects, 2026."
+  },
+  {
+    "id": "dl-63-unnamed-london-dyke-marchers-iii-elif-gonen",
+    "title": "Unnamed “London Dyke Marchers” III, Elif Gonen - Gonen, E. (2026, June 22). Lesbians take London for the Dyke March 2026. Dazed. Dazed Digital.",
+    "year": "2026",
+    "type": "painting",
+    "selling": false,
+    "sold": true,
+    "price": 115,
+    "edition": null,
+    "image": "images/works/dirty-laundry-63.jpg",
+    "description": "Ink and gloss varnish on tile, 20 x 20 cm.\nNo. 63 in 'Dirty Laundry', Airspace Projects, 2026."
   },
   {
     "id": "dl-68-unnamed-solomon-islands-woman-playing-cats-cradl",
@@ -826,6 +814,18 @@
     "edition": null,
     "image": "images/works/dirty-laundry-70.jpg",
     "description": "Ink and gloss varnish on tile, 20 x 20 cm.\nNo. 70 in 'Dirty Laundry', Airspace Projects, 2026."
+  },
+  {
+    "id": "dl-65-tina-majorino-as-deb-i",
+    "title": "Tina Majorino as Deb I - Hess, J. (Director). (2004). Napoleon Dynamite [Film]. Fox Searchlight Pictures.",
+    "year": "2026",
+    "type": "painting",
+    "selling": false,
+    "sold": true,
+    "price": 115,
+    "edition": null,
+    "image": "images/works/dirty-laundry-65.jpg",
+    "description": "Ink and gloss varnish on tile, 20 x 20 cm.\nNo. 65 in 'Dirty Laundry', Airspace Projects, 2026."
   },
   {
     "id": "dl-71-unnamed-london-dyke-marchers-ii-elif-gonen",
